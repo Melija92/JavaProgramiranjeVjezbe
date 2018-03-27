@@ -9,7 +9,7 @@ public class Glavna {
 	public static void main(String[] args) {
 		MjernaPostaja[] mjernePostaje = new MjernaPostaja[BROJ_MJERNIH_POSTAJA + BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA];
 
-		mjernePostaje = HelperUnosenje.postaviMjernePostaje
+		mjernePostaje = HelperPostavljanje.postaviMjernePostaje
 				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, mjernePostaje);
 
 		ispisiPodatke(mjernePostaje);
@@ -31,12 +31,13 @@ public class Glavna {
 			+ " " + "y:" 
 			+ mjernaPostaja.getGeografskaTocka().getY());
 
+			Senzor[] sortiraniSenzori = mjernaPostaja.dohvatiSenzore();
 			System.out.println("Vrijednosti senzora postaje su:");
-			for (Senzor senzor : mjernaPostaja.dohvatiSenzore()) {
+			for (Senzor senzor : sortiraniSenzori) {
 				System.out.println(senzor.dohvatiPodatkeSenzora());
 			}
 
-			System.out.println("----------------------------------");
+			System.out.println("---------------------------------------");
 		}
 	}
 

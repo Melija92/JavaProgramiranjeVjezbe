@@ -14,8 +14,9 @@ public interface RadioSondazna {
     }
 
     default void povecajVisinu(Integer visina){
-        if (provjeriVisinu(visina) == true)
+        if (provjeriVisinu(visina))
             podesiVisinuPostaje(1000);
-        podesiVisinuPostaje(visina + 1);
+        else
+            podesiVisinuPostaje(visina + 1);
     }
 }

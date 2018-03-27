@@ -4,7 +4,9 @@ public class RadioSondaznaMjernaPostaja extends MjernaPostaja implements RadioSo
 
     private Integer visinaPostaje;
 
-    public RadioSondaznaMjernaPostaja(Integer visinaPostaje, String naziv, Mjesto mjesto, GeografskaTocka geografskaTocka, Senzor[] senzori) {
+    public RadioSondaznaMjernaPostaja(Integer visinaPostaje,
+                                      String naziv, Mjesto mjesto,
+                                      GeografskaTocka geografskaTocka, Senzor[] senzori) {
         super(naziv, mjesto, geografskaTocka, senzori);
         this.visinaPostaje = visinaPostaje;
     }
@@ -18,7 +20,4 @@ public class RadioSondaznaMjernaPostaja extends MjernaPostaja implements RadioSo
     public Integer dohvatiVisinuPostaje() {
         return visinaPostaje;
     }
-
-
-
 }

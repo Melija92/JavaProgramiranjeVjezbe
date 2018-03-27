@@ -1,5 +1,7 @@
 package hr.java.vjezbe.entitet;
 
+import java.math.BigDecimal;
+
 public class SenzorTemperature extends Senzor {
 
 //    private static final string CELSIJUS = "C";
@@ -9,16 +11,18 @@ public class SenzorTemperature extends Senzor {
 
     private String elektronickaKomponenta;
 
-    public SenzorTemperature(String elektronickaKomponenta, String mjernaJedinica, Byte preciznost) {
+    public SenzorTemperature(String elektronickaKomponenta, String mjernaJedinica, BigDecimal preciznost) {
         super(mjernaJedinica, preciznost);
+        this.elektronickaKomponenta = elektronickaKomponenta;
     }
 
     @Override
     public String dohvatiPodatkeSenzora() {
-        return getElektronickaKomponenta() + getMjernaJedinica() + getPreciznost();
+        return "Senzor temperature\n Komponenta: " +  getElektronickaKomponenta() + ", " + "vrijednost: " + getVrijednost() + getMjernaJedinica();
     }
 
     public String getElektronickaKomponenta() {
+
         return elektronickaKomponenta;
     }
 

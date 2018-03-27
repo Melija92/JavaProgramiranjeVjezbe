@@ -4,15 +4,17 @@ import java.math.BigDecimal;
 
 public abstract class Senzor {
     private String mjernaJedinica;
-    private Byte preciznost;
+    private BigDecimal preciznost;
     private BigDecimal vrijednost;
 
-    public Senzor(String mjernaJedinica, Byte preciznost) {
+    public Senzor(String mjernaJedinica, BigDecimal preciznost) {
         this.mjernaJedinica = mjernaJedinica;
         this.preciznost = preciznost;
     }
 
     public abstract String dohvatiPodatkeSenzora();
+
+
 
     public String getMjernaJedinica() {
         return mjernaJedinica;
@@ -22,11 +24,11 @@ public abstract class Senzor {
         this.mjernaJedinica = mjernaJedinica;
     }
 
-    public byte getPreciznost() {
+    public BigDecimal getPreciznost() {
         return preciznost;
     }
 
-    public void setPreciznost(byte preciznost) {
+    public void setPreciznost(BigDecimal preciznost) {
         this.preciznost = preciznost;
     }
 

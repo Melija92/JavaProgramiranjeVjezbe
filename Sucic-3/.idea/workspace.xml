@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abb3f14f-cd22-4885-8a58-b061f55a98a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sucic-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sucic-3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperPostavljanje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperPostavljanje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/entitet/SenzorTemperature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/entitet/SenzorTemperature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/glavna/Glavna.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/glavna/Glavna.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/glavna/HelperOperacije.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/glavna/HelperOperacije.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/glavna/HelperUnosenje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hr/java/vjezbe/glavna/HelperUnosenje.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/Sucic-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/Sucic-3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/entitet/SenzorTemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/entitet/SenzorTemperature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/glavna/Glavna.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/glavna/Glavna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/glavna/HelperPostavljanje.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/glavna/HelperPostavljanje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/glavna/HelperUnosenje.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/src/hr/java/vjezbe/glavna/HelperUnosenje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/entitet/SenzorTemperature.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/entitet/SenzorTemperature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/glavna/Glavna.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/glavna/Glavna.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/glavna/HelperOperacije.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/glavna/HelperOperacije.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/glavna/HelperUnosenje.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-2/target/classes/hr/java/vjezbe/glavna/HelperUnosenje.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,13 +28,25 @@
       <file leaf-file-name="Glavna.java" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="799">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Drzava.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HelperUnosenje.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="73" selection-start-line="73" selection-end-line="87" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Drzava.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Drzava.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -110,9 +122,9 @@
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVlage.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperOperacije.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperPostavljanje.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java" />
       </list>
     </option>
   </component>
@@ -145,35 +157,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Sucic-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
               <item name="entitet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
               <item name="glavna" type="462c0819:PsiDirectoryNode" />
@@ -182,12 +196,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sucic-3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -297,16 +309,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.27726674" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32759494" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1826544" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22339028" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298292" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -323,7 +337,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32896462" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.27726674" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -332,12 +345,12 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32896462" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.173125" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="4" />
@@ -347,7 +360,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.327654" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.2778506" />
       <window_info anchor="right" id="Maven Projects" order="4" />
@@ -674,16 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -716,17 +719,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Drzava.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="73" selection-start-line="73" selection-end-line="87" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -782,7 +795,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Sucic-3</last-edited>
+          <last-edited>Sucic-1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

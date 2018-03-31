@@ -3,17 +3,32 @@ package hr.java.vjezbe.glavna;
 import hr.java.vjezbe.entitet.*;
 
 import java.math.BigDecimal;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HelperUnosenje {
     public static Drzava unesiDrzavu(Scanner unosDrzave) {
         System.out.println("Unesite naziv države");
+        BigDecimal povrsina;
         String naziv = unosDrzave.nextLine();
 
-        System.out.println("Unesite površinu države");
-        BigDecimal povrsina = unosDrzave.nextBigDecimal();
+        boolean nastaviPetlju = false;
+        do {
+            try {
+                System.out.println("Unesite površinu države");
+                povrsina = unosDrzave.nextBigDecimal();
 
-        unosDrzave.nextLine();
+                unosDrzave.nextLine();
+                nastaviPetlju = false;
+            }
+            catch (InputMismatchException ex){
+                System.out.println("Unijeli ste krivo, ponovit'e krvi vam");
+                unosDrzave.nextBigDecimal();
+                nastaviPetlju = true;
+                povrsina = null;
+            }
+        }while (nastaviPetlju);
+
 
         return new Drzava(naziv, povrsina);
     }
@@ -33,15 +48,44 @@ public class HelperUnosenje {
     }
 
     public static GeografskaTocka unesiGeografskuTocku(Scanner unosGeoTocke) {
-        System.out.println("Unesite Geo koordinatu X");
-        BigDecimal x = unosGeoTocke.nextBigDecimal();
+
+        BigDecimal x;
+        BigDecimal y;
+
+        boolean nastaviPetlju = false;
+        do {
+            try {
+                System.out.println("Unesite Geo koordinatu X");
+                x = unosGeoTocke.nextBigDecimal();
+
+                unosGeoTocke.nextLine();
+                nastaviPetlju = false;
+            }
+            catch (InputMismatchException ex){
+                System.out.println("Unijeli ste krivo, ponovite unos");
+                unosGeoTocke.nextBigDecimal();
+                nastaviPetlju = true;
+                x = null;
+            }
+        }while (nastaviPetlju);
 
         unosGeoTocke.nextLine();
 
-        System.out.println("Unesite Geo koordinatu Y");
-        BigDecimal y = unosGeoTocke.nextBigDecimal();
+        do {
+            try {
+                System.out.println("Unesite Geo koordinatu Y");
+                y = unosGeoTocke.nextBigDecimal();
 
-        unosGeoTocke.nextLine();
+                unosGeoTocke.nextLine();
+                nastaviPetlju = false;
+            }
+            catch (InputMismatchException ex){
+                System.out.println("Unijeli ste krivo, ponovite unos");
+                unosGeoTocke.nextBigDecimal();
+                nastaviPetlju = true;
+                y = null;
+            }
+        }while (nastaviPetlju);
 
         return new GeografskaTocka(x, y);
     }
@@ -57,6 +101,23 @@ public class HelperUnosenje {
         BigDecimal vrijednost = unosSenzora.nextBigDecimal();
         unosSenzora.nextLine();
 
+        nastaviPetlju = 
+        do {
+            try {
+                System.out.println("Unesite Geo koordinatu Y");
+                y = unosSenzora.nextBigDecimal();
+
+                unosSenzora.nextLine();
+                nastaviPetlju = false;
+            }
+            catch (InputMismatchException ex){
+                System.out.println("Unijeli ste krivo, ponovite unos");
+                unosGeoTocke.nextBigDecimal();
+                nastaviPetlju = true;
+                y = null;
+            }
+        }while (nastaviPetlju);
+
         SenzorTemperature senzorTemperature = new SenzorTemperature(elektronickaKomponenta,
                 HelperOperacije.odrediMjernuJedinicuTemperature(mjernaJedinica), HelperOperacije.odrediPreciznostTemperature(mjernaJedinica));
         senzorTemperature.setVrijednost(vrijednost);
@@ -67,7 +128,7 @@ public class HelperUnosenje {
     public static SenzorVlage unesiSenzorVlage(Scanner unosSenzora) {
         System.out.println("Unesite mjernu jedinicu za vlagu po oznaci ispod navedenoj");
         System.out.println(" - 1 za postotak");
-        Byte mjernaJedinica = unosSenzora.nextByte();
+        Byte mjernaJedinica = unosSenzora.nextByte( );
 
         System.out.println("Unesite vrijednost senzora vlage");
         BigDecimal vrijednost = unosSenzora.nextBigDecimal();

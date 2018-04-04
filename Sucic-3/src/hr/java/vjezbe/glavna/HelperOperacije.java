@@ -2,7 +2,15 @@ package hr.java.vjezbe.glavna;
 
 import java.math.BigDecimal;
 
+/**
+ * predstavlja entitet za pomoće izračune kao pomoćna klasa u aplikaciji
+ */
 public class HelperOperacije {
+    /**
+     * određuje redni broj na osnovu dobivenog broja
+     * @param broj
+     * @return
+     */
     public static String odrediRedniBroj(int broj) {
         String redniBroj;
 
@@ -28,6 +36,11 @@ public class HelperOperacije {
         return redniBroj;
     }
 
+    /**
+     * određuje mjernu jedinicu za temperaturu
+     * @param oznaka
+     * @return
+     */
     public static String odrediMjernuJedinicuTemperature(int oznaka) {
         String mjernaJedinica;
 
@@ -52,6 +65,12 @@ public class HelperOperacije {
 
         return mjernaJedinica;
     }
+
+    /**
+     * određuje preciznost mjerne jedinice za temperaturu
+     * @param oznaka
+     * @return
+     */
     public static BigDecimal odrediPreciznostTemperature(int oznaka) {
         BigDecimal preciznost;
 
@@ -77,6 +96,11 @@ public class HelperOperacije {
         return preciznost;
     }
 
+    /**
+     * određuje mjernu jedinic za vlagu na osnovu dobivenog broja
+     * @param oznaka
+     * @return
+     */
     public static String odrediMjernuJedinicuVlage(int oznaka) {
         String mjernaJedinica;
 
@@ -91,6 +115,12 @@ public class HelperOperacije {
 
         return mjernaJedinica;
     }
+
+    /**
+     * određuje preciznost za mjernu jedinicu vlage po dobivenom broju
+     * @param oznaka
+     * @return
+     */
     public static BigDecimal odrediPreciznostVlage(Byte oznaka) {
         BigDecimal preciznost;
 
@@ -106,6 +136,11 @@ public class HelperOperacije {
         return preciznost;
     }
 
+    /**
+     *određuje mjernu jedinicu vjetra na osnovu dobivenog broja
+     * @param oznaka
+     * @return
+     */
     public static String odrediMjernuJedinicuVjertra(int oznaka) {
         String mjernaJedinica;
 
@@ -126,6 +161,12 @@ public class HelperOperacije {
 
         return mjernaJedinica;
     }
+
+    /**
+     * određuje preciznost mjerne jedinice vjetra na osnovu dobivenog broja
+     * @param oznaka
+     * @return
+     */
     public static BigDecimal odrediPreciznostVjetra(Byte oznaka) {
         BigDecimal preciznost;
 

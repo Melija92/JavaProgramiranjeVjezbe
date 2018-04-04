@@ -2,11 +2,19 @@ package hr.java.vjezbe.entitet;
 
 import java.math.BigDecimal;
 
+/**
+ * predstavlja entitet klase Senzora kao apstraktnu klasu
+ */
 public abstract class Senzor {
     private String mjernaJedinica;
     private BigDecimal preciznost;
     private BigDecimal vrijednost;
 
+    /**
+     * prima parametre mjerne jedinice i njenu preciznost
+     * @param mjernaJedinica označava mjernuJedinicu
+     * @param preciznost ozačava preciznost
+     */
     public Senzor(String mjernaJedinica, BigDecimal preciznost) {
         this.mjernaJedinica = mjernaJedinica;
         this.preciznost = preciznost;

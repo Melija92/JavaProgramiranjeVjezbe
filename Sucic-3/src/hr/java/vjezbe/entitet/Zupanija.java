@@ -1,9 +1,17 @@
 package hr.java.vjezbe.entitet;
 
+/**
+ * predstavlja entitet županije
+ */
 public class Zupanija {
 	private String naziv;
 	private Drzava drzava;
 
+	/**
+	 * prima parametre naziva županije i referencu na državu
+	 * @param naziv je naziv županije
+	 * @param drzava je referenca na državu
+	 */
 	public Zupanija(String naziv, Drzava drzava) {
 		this.naziv = naziv;
 		this.drzava = drzava;

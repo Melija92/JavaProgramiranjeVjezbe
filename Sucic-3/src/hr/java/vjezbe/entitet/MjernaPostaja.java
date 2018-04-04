@@ -1,7 +1,9 @@
 package hr.java.vjezbe.entitet;
 
 import java.util.Arrays;
-
+/**
+ * predstavlja entitet mjernepostaje s atributima nazivom, referencom na mjesto, graficku tocku te polje senzora
+ */
 public class MjernaPostaja {
 	private String naziv;
 	
@@ -10,7 +12,14 @@ public class MjernaPostaja {
 	private GeografskaTocka geografskaTocka;
 
 	private Senzor[] senzori;
-	
+
+	/**
+	 * prima parametre naziva, mjesta, geografske tocke i polje senzora
+	 * @param naziv je naziv mjerne postaje
+	 * @param mjesto je referenca na mjesto
+	 * @param geografskaTocka je referenca na geografsku točku
+	 * @param senzori je polje senzora
+	 */
 	public MjernaPostaja(String naziv, Mjesto mjesto, GeografskaTocka geografskaTocka, Senzor[] senzori) {
 		this.naziv = naziv;
 		this.mjesto = mjesto;
@@ -18,6 +27,10 @@ public class MjernaPostaja {
 		this.senzori = senzori;
 	}
 
+	/**
+	 * sortira senzore u objektu po nazivu mjerne jedinice senzora abecedeno
+	 * @return
+	 */
 	public Senzor[] dohvatiSenzore(){
 		Arrays.sort(senzori, (p1, p2) -> p1.getMjernaJedinica().compareTo(p2.getMjernaJedinica()));
 		return senzori;

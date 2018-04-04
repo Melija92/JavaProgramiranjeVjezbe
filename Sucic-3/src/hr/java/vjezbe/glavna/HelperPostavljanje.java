@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 import static hr.java.vjezbe.glavna.HelperUnosenje.*;
 
+/**
+ * predstavlja entitet za pomoćnu klasu za postavljanje
+ */
 public class HelperPostavljanje {
     public static MjernaPostaja[] postaviMjernePostaje
             (int BROJ_MJERNIH_POSTAJA, int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, MjernaPostaja[] mjernePostaje){
@@ -40,6 +43,9 @@ public class HelperPostavljanje {
         return mjernePostaje;
     }
 
+    /**
+     * pomoćna statična klasa za postavljanje podataka mjesta
+     */
     private static Mjesto pomocnaMetodaZapostavljanjeMjesta(Scanner unos){
         Drzava drzava = unesiDrzavu(unos);
         Zupanija zupanija = unesiZupaniju(unos, drzava);
@@ -48,6 +54,11 @@ public class HelperPostavljanje {
         return mjesto;
     }
 
+    /**
+     * pomoćna statična metoda za postavljanje polje senzora
+     * @param unos
+     * @return
+     */
     private static Senzor[] pomocnaMetodaZapostavljanjeSenzora(Scanner unos){
         SenzorTemperature senzorTemperature = unesiSenzorTemperature(unos);
         SenzorVjetra senzorVjetra = unesiSenzorVjetra(unos);

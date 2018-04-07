@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abb3f14f-cd22-4885-8a58-b061f55a98a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sucic-3/src/hr/java/vjezbe/glavna/Glavna.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sucic-3/src/hr/java/vjezbe/glavna/Glavna.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="Glavna.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="459">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,56 +181,46 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
               <item name="entitet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
               <item name="glavna" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
+              <item name="Sucic-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
               <item name="iznimke" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sucic-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-3" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -239,7 +229,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sucic-4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -267,7 +257,7 @@
       <output_file path="$PROJECT_DIR$/src/hr/java/vjezbe/iznimke/iznimke.log" />
       <log_file alias="Iznimke" path="$PROJECT_DIR$/src/hr/java/vjezbe/iznimke" />
       <option name="MAIN_CLASS_NAME" value="hr.java.vjezbe.glavna.Glavna" />
-      <module name="Sucic-3" />
+      <module name="Sucic-4" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -772,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        <state relative-caret-position="459">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

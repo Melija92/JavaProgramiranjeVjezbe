@@ -14,8 +14,8 @@ public class SenzorVjetra extends Senzor {
      * @param preciznost je preciznost mjerne jedinice
      * @param velicinaSenzora je veličina senzora vjetra
      */
-    public SenzorVjetra(String mjernaJedinica, BigDecimal preciznost, String velicinaSenzora) {
-        super(mjernaJedinica, preciznost);
+    public SenzorVjetra(String mjernaJedinica, BigDecimal preciznost, String velicinaSenzora, RadSenzora radSenzora) {
+        super(mjernaJedinica, preciznost, radSenzora);
         this.velicinaSenzora = velicinaSenzora;
     }
 

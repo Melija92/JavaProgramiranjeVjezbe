@@ -11,9 +11,8 @@ public class SenzorVlage extends Senzor {
      * @param mjernaJedinica
      * @param preciznost
      */
-    public SenzorVlage(String mjernaJedinica, BigDecimal preciznost) {
-
-        super(mjernaJedinica, preciznost);
+    public SenzorVlage(String mjernaJedinica, BigDecimal preciznost, RadSenzora radSenzora) {
+        super(mjernaJedinica, preciznost, radSenzora);
     }
 
     @Override

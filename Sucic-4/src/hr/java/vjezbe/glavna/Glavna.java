@@ -7,6 +7,9 @@ import hr.java.vjezbe.iznimke.VisokaTemperaturaException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Glavna {
 	private static final int BROJ_MJERNIH_POSTAJA = 1;
 	private static final int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA = 0;
@@ -14,9 +17,10 @@ public class Glavna {
 
 	public static void main(String[] args) {
 		MjernaPostaja[] mjernePostaje = new MjernaPostaja[BROJ_MJERNIH_POSTAJA + BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA];
+		List<MjernaPostaja> listaMjernihPostaja = new ArrayList<MjernaPostaja>();
 
 		mjernePostaje = HelperPostavljanje.postaviMjernePostaje
-				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, mjernePostaje);
+				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, listaMjernihPostaja);
 
 		ispisiPodatke(mjernePostaje);
 

@@ -9,15 +9,16 @@ public abstract class Senzor {
     private String mjernaJedinica;
     private BigDecimal preciznost;
     private BigDecimal vrijednost;
-
+    private RadSenzora radSenzora;
     /**
      * prima parametre mjerne jedinice i njenu preciznost
      * @param mjernaJedinica označava mjernuJedinicu
      * @param preciznost ozačava preciznost
      */
-    public Senzor(String mjernaJedinica, BigDecimal preciznost) {
+    public Senzor(String mjernaJedinica, BigDecimal preciznost, RadSenzora radSenzora) {
         this.mjernaJedinica = mjernaJedinica;
         this.preciznost = preciznost;
+        this.radSenzora = radSenzora;
     }
 
     public abstract String dohvatiPodatkeSenzora();
@@ -46,5 +47,12 @@ public abstract class Senzor {
 
     public void setVrijednost(BigDecimal vrijednost) {
         this.vrijednost = vrijednost;
+    }
+    public RadSenzora getRadSenzora() {
+        return radSenzora;
+    }
+
+    public void setRadSenzora(RadSenzora radSenzora) {
+        this.radSenzora = radSenzora;
     }
 }

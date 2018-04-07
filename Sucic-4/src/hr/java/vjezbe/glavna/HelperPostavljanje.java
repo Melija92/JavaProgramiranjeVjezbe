@@ -2,6 +2,7 @@ package hr.java.vjezbe.glavna;
 
 import hr.java.vjezbe.entitet.*;
 
+import java.util.List;
 import java.util.Scanner;
 
 import static hr.java.vjezbe.glavna.HelperUnosenje.*;
@@ -10,8 +11,8 @@ import static hr.java.vjezbe.glavna.HelperUnosenje.*;
  * predstavlja entitet za pomoćnu klasu za postavljanje
  */
 public class HelperPostavljanje {
-    public static MjernaPostaja[] postaviMjernePostaje
-            (int BROJ_MJERNIH_POSTAJA, int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, MjernaPostaja[] mjernePostaje){
+    public static List<MjernaPostaja> postaviMjernePostaje
+            (int BROJ_MJERNIH_POSTAJA, int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, List<MjernaPostaja> mjernePostaje){
 
         Scanner unos = new Scanner(System.in);
         Integer ukupanBrojPostaja = BROJ_MJERNIH_POSTAJA + BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA;
@@ -24,7 +25,7 @@ public class HelperPostavljanje {
             Senzor[] senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
             MjernaPostaja mjernaPostaja = unesiMjernuPostaju(unos, mjesto, geografskaTocka, senzori);
 
-            mjernePostaje[i] = mjernaPostaja;
+            mjernePostaje.add(mjernaPostaja);
         }
 
         for (int n = BROJ_MJERNIH_POSTAJA; n < ukupanBrojPostaja; n++) {
@@ -36,7 +37,7 @@ public class HelperPostavljanje {
             RadioSondaznaMjernaPostaja radioSondaznamjernaPostaja = unesiRadioSondaznuMjernuPostaju
                                                             (unos, mjesto, geografskaTocka, senzori);
 
-            mjernePostaje[n] = radioSondaznamjernaPostaja;
+            mjernePostaje.add(radioSondaznamjernaPostaja);
         }
         unos.close();
 

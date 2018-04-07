@@ -20,8 +20,8 @@ public class SenzorTemperature extends Senzor {
      * @param mjernaJedinica je vrsta mjerne jedinice
      * @param preciznost predstavlja precinost mjerne jedinice
      */
-    public SenzorTemperature(String elektronickaKomponenta, String mjernaJedinica, BigDecimal preciznost) {
-        super(mjernaJedinica, preciznost);
+    public SenzorTemperature(String elektronickaKomponenta, String mjernaJedinica, BigDecimal preciznost, RadSenzora radSenzora) {
+        super(mjernaJedinica, preciznost, radSenzora);
         this.elektronickaKomponenta = elektronickaKomponenta;
     }
 

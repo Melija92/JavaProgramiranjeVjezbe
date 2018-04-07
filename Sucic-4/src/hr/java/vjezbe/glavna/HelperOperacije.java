@@ -184,7 +184,6 @@ public class HelperOperacije {
                     preciznost = null;
                     break;
             }
-
         return preciznost;
     }
 }

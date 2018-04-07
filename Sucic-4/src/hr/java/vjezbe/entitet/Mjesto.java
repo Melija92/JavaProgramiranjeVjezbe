@@ -6,15 +6,17 @@ package hr.java.vjezbe.entitet;
 public class Mjesto {
 	private String naziv;
 	private Zupanija zupanija;
+	private VrstaMjesta vrstaMjesta;
 
 	/**
 	 * prima parametre naziva i reference na županiju
 	 * @param naziv je naziv mjesta
 	 * @param zupanija je referenca na županiju
 	 */
-	public Mjesto(String naziv, Zupanija zupanija) {
+	public Mjesto(String naziv, Zupanija zupanija, VrstaMjesta vrstaMjesta) {
 		this.naziv = naziv;
 		this.zupanija = zupanija;
+		this.vrstaMjesta = vrstaMjesta;
 	}
 	
 	public String getNaziv() {
@@ -31,5 +33,12 @@ public class Mjesto {
 
 	public void setZupanija(Zupanija zupanija) {
 		this.zupanija = zupanija;
+	}
+	public VrstaMjesta getVrstaMjesta() {
+		return vrstaMjesta;
+	}
+
+	public void setVrstaMjesta(VrstaMjesta vrstaMjesta) {
+		this.vrstaMjesta = vrstaMjesta;
 	}
 }

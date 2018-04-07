@@ -1,15 +1,21 @@
 package hr.java.vjezbe.glavna;
 
 import hr.java.vjezbe.entitet.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static hr.java.vjezbe.glavna.HelperEnumUnosenje.unosRadaSenzora;
+import static hr.java.vjezbe.glavna.HelperEnumUnosenje.unosVrsteMjesta;
+
 /**
  * predstavlja entitet klase HelperUnosenje sa statičnim metodama za unošenje podataka
  */
 public class HelperUnosenje {
+    private static final Logger logger = LoggerFactory.getLogger(Glavna.class);
     /**
      * pomoćna statična metoda za unos države
      */
@@ -56,7 +62,9 @@ public class HelperUnosenje {
         System.out.println("Unesite naziv mjesta");
         String naziv = unosMjesta.nextLine();
 
-        return new Mjesto(naziv, zupanija);
+        VrstaMjesta vrstaMjesta = unosVrsteMjesta(unosMjesta);
+
+        return new Mjesto(naziv, zupanija, vrstaMjesta);
     }
 
     /**
@@ -114,6 +122,7 @@ public class HelperUnosenje {
         System.out.println(" - 1 za Celzijus, 2 za Kelvin, 3 za Fahrenheit ili 4 za Rankine");
         Integer mjernaJedinica = unosSenzora.nextInt();
 
+        RadSenzora radSenzora = unosRadaSenzora(unosSenzora);
         BigDecimal vrijednost;
         boolean nastaviPetlju;
         do {
@@ -133,7 +142,8 @@ public class HelperUnosenje {
         }while (nastaviPetlju);
 
         SenzorTemperature senzorTemperature = new SenzorTemperature(elektronickaKomponenta,
-                HelperOperacije.odrediMjernuJedinicuTemperature(mjernaJedinica), HelperOperacije.odrediPreciznostTemperature(mjernaJedinica));
+                HelperOperacije.odrediMjernuJedinicuTemperature(mjernaJedinica), HelperOperacije.odrediPreciznostTemperature(mjernaJedinica),
+                radSenzora);
         senzorTemperature.setVrijednost(vrijednost);
 
         return senzorTemperature;
@@ -164,9 +174,9 @@ public class HelperUnosenje {
                 vrijednost = null;
             }
         }while (nastaviPetlju);
-
+        RadSenzora radSenzora = unosRadaSenzora(unosSenzora);
         SenzorVlage senzorVlage = new SenzorVlage
-                (HelperOperacije.odrediMjernuJedinicuVlage(mjernaJedinica), HelperOperacije.odrediPreciznostVlage(mjernaJedinica));
+                (HelperOperacije.odrediMjernuJedinicuVlage(mjernaJedinica), HelperOperacije.odrediPreciznostVlage(mjernaJedinica), radSenzora);
         senzorVlage.setVrijednost(vrijednost);
 
         return senzorVlage;
@@ -202,8 +212,11 @@ public class HelperUnosenje {
             }
         }while (nastaviPetlju);
 
+        RadSenzora radSenzora = unosRadaSenzora(unosSenzora);
         SenzorVjetra senzorVjetra = new SenzorVjetra
-                (HelperOperacije.odrediMjernuJedinicuVjertra(mjernaJedinica), HelperOperacije.odrediPreciznostVjetra(mjernaJedinica), velicinaSenzora);
+                (HelperOperacije.odrediMjernuJedinicuVjertra(mjernaJedinica), HelperOperacije.odrediPreciznostVjetra(mjernaJedinica),
+                        velicinaSenzora,
+                        radSenzora);
         senzorVjetra.setVrijednost(vrijednost);
 
         return senzorVjetra;

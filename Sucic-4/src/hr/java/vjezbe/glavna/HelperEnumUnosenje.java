@@ -22,6 +22,7 @@ public class HelperEnumUnosenje {
             System.out.println("Odaberi vrstu mjesta");
             try{
                 redniBrojvrsteMjesta = unos.nextInt();
+                unos.nextLine();
                 break;
             }
             catch(InputMismatchException ex){
@@ -50,6 +51,7 @@ public class HelperEnumUnosenje {
             System.out.println("Odaberi rad senzora");
             try{
                 redniBrojSenzora = unos.nextInt();
+                unos.nextLine();
                 break;
             }
             catch(InputMismatchException ex){

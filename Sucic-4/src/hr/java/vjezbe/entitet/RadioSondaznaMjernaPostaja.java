@@ -1,5 +1,7 @@
 package hr.java.vjezbe.entitet;
 
+import java.util.List;
+
 /**
  * predstavlja entitet radio sondažne postaje
  */
@@ -17,7 +19,7 @@ public class RadioSondaznaMjernaPostaja extends MjernaPostaja implements RadioSo
      */
     public RadioSondaznaMjernaPostaja(Integer visinaPostaje,
                                       String naziv, Mjesto mjesto,
-                                      GeografskaTocka geografskaTocka, Senzor[] senzori) {
+                                      GeografskaTocka geografskaTocka, List<Senzor> senzori) {
         super(naziv, mjesto, geografskaTocka, senzori);
         this.visinaPostaje = visinaPostaje;
     }

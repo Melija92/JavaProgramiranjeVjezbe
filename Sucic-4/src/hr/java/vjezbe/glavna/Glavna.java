@@ -11,21 +11,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Glavna {
-	private static final int BROJ_MJERNIH_POSTAJA = 1;
+	private static final int BROJ_MJERNIH_POSTAJA = 5;
 	private static final int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA = 0;
 	private static final Logger logger = LoggerFactory.getLogger(Glavna.class);
 
 	public static void main(String[] args) {
-		MjernaPostaja[] mjernePostaje = new MjernaPostaja[BROJ_MJERNIH_POSTAJA + BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA];
 		List<MjernaPostaja> listaMjernihPostaja = new ArrayList<MjernaPostaja>();
 
-		mjernePostaje = HelperPostavljanje.postaviMjernePostaje
+		listaMjernihPostaja = HelperPostavljanje.postaviMjernePostaje
 				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, listaMjernihPostaja);
 
-		ispisiPodatke(mjernePostaje);
+		ispisiPodatke(listaMjernihPostaja);
 
 		while (true){
-			for (MjernaPostaja mjernaPostaja: mjernePostaje) {
+			for (MjernaPostaja mjernaPostaja: listaMjernihPostaja) {
 				for (Senzor senzor: mjernaPostaja.dohvatiSenzore()) {
 					if(senzor instanceof SenzorTemperature){
 						try{
@@ -40,15 +39,13 @@ public class Glavna {
 				}
 			}
 		}
-
-
 	}
 
 	/**
 	 * ispisuje podatke mjernih postaja
 	 * @param mjernePostaje
 	 */
-	private static void ispisiPodatke(MjernaPostaja[] mjernePostaje) {
+	private static void ispisiPodatke(List<MjernaPostaja> mjernePostaje) {
 		for (MjernaPostaja mjernaPostaja : mjernePostaje) {
 			System.out.println("Naziv mjerne postaje: " + mjernaPostaja.getNaziv());
 
@@ -64,7 +61,7 @@ public class Glavna {
 			+ " " + "y:" 
 			+ mjernaPostaja.getGeografskaTocka().getY());
 
-			Senzor[] sortiraniSenzori = mjernaPostaja.dohvatiSenzore();
+			List<Senzor> sortiraniSenzori = mjernaPostaja.dohvatiSenzore();
 			System.out.println("Vrijednosti senzora postaje su:");
 			for (Senzor senzor : sortiraniSenzori) {
 				System.out.println(senzor.dohvatiPodatkeSenzora());

@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
 import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 import static hr.java.vjezbe.glavna.HelperEnumUnosenje.unosRadaSenzora;
@@ -29,7 +31,6 @@ public class HelperUnosenje {
             try {
                 System.out.println("Unesite površinu države");
                 povrsina = unosDrzave.nextBigDecimal();
-
                 unosDrzave.nextLine();
                 nastaviPetlju = false;
             }
@@ -42,17 +43,33 @@ public class HelperUnosenje {
         }while (nastaviPetlju);
 
 
+
+
         return new Drzava(naziv, povrsina);
     }
 
     /**
      * pomoćna statična metoda za unos županije
      */
-    public static Zupanija unesiZupaniju(Scanner unosZupanije, Drzava drzava) {
-        System.out.println("Unesite naziv županije");
-        String naziv = unosZupanije.nextLine();
+    public static Zupanija unesiZupaniju(Scanner unosZupanije, Drzava drzava, List<MjernaPostaja> postaje) {
+            System.out.println("Unesite naziv županije");
+            String naziv = unosZupanije.nextLine();
+            Zupanija zupanija;
 
-        return new Zupanija(naziv, drzava);
+            Optional<MjernaPostaja> postaja = postaje.stream().filter(p -> p.getMjesto().getZupanija().getDrzava().getNaziv().equals(
+                    drzava.getNaziv())).findFirst();
+
+            if(postaja.isPresent()){
+                Drzava postjecaDrzavaIzListe = postaja.get().getMjesto().getZupanija().getDrzava();
+                zupanija = new Zupanija(naziv, postjecaDrzavaIzListe);
+                postjecaDrzavaIzListe.zupanije.add(zupanija);
+            }
+            else {
+            zupanija = new Zupanija(naziv, drzava);
+            drzava.zupanije.add(zupanija);
+        }
+
+        return zupanija;
     }
 
     /**
@@ -226,7 +243,7 @@ public class HelperUnosenje {
      * pomoćna statična metoda za unos mjerne postaje
      */
     public static MjernaPostaja unesiMjernuPostaju(Scanner unosMjernePostaje,
-                                                    Mjesto mjesto, GeografskaTocka geografskaTocka, Senzor[] senzori) {
+                                                    Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori) {
         System.out.println("Unesite naziv mjerne postaje");
         String naziv = unosMjernePostaje.nextLine();
 
@@ -237,7 +254,7 @@ public class HelperUnosenje {
      * pomoćna statična metoda za unos radio sondažne mjerne postaje
      */
     public static RadioSondaznaMjernaPostaja unesiRadioSondaznuMjernuPostaju(Scanner unosMjernePostaje,
-                                                   Mjesto mjesto, GeografskaTocka geografskaTocka, Senzor[] senzori) {
+                                                   Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori) {
         System.out.println("Unesite naziv radio sondažne mjerne postaje");
         String naziv = unosMjernePostaje.nextLine();
 

@@ -34,7 +34,8 @@ public class MjernaPostaja {
 	 * @return
 	 */
 	public List<Senzor> dohvatiSenzore(){
-		Arrays.sort(senzori, (p1, p2) -> p1.getMjernaJedinica().compareTo(p2.getMjernaJedinica()));
+		senzori.sort((a, b) -> a.getMjernaJedinica().compareTo(b.getMjernaJedinica()));
+
 		return senzori;
 	}
 
@@ -63,11 +64,11 @@ public class MjernaPostaja {
 		this.geografskaTocka = geografskaTocka;
 	}
 
-	public Senzor[] getSenzori() {
+	public List<Senzor> getSenzori() {
 		return senzori;
 	}
 
-	public void setSenzori(Senzor[] senzori) {
+	public void setSenzori(List<Senzor> senzori) {
 		this.senzori = senzori;
 	}
 }

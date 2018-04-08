@@ -2,6 +2,7 @@ package hr.java.vjezbe.glavna;
 
 import hr.java.vjezbe.entitet.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,10 +21,10 @@ public class HelperPostavljanje {
         for (int i = 0; i < BROJ_MJERNIH_POSTAJA; i++) {
             System.out.println("Unesite " + HelperOperacije.odrediRedniBroj(i) + " mjernu postaju");
 
-            Mjesto mjesto = pomocnaMetodaZapostavljanjeMjesta(unos);
-            GeografskaTocka geografskaTocka = unesiGeografskuTocku(unos);
-            Senzor[] senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
-            MjernaPostaja mjernaPostaja = unesiMjernuPostaju(unos, mjesto, geografskaTocka, senzori);
+            Mjesto mjesto = pomocnaMetodaZapostavljanjeMjesta(unos, mjernePostaje);
+//            GeografskaTocka geografskaTocka = unesiGeografskuTocku(unos);
+//            List<Senzor> senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
+            MjernaPostaja mjernaPostaja = unesiMjernuPostaju(unos, mjesto, null, null);
 
             mjernePostaje.add(mjernaPostaja);
         }
@@ -31,9 +32,9 @@ public class HelperPostavljanje {
         for (int n = BROJ_MJERNIH_POSTAJA; n < ukupanBrojPostaja; n++) {
             System.out.println("Unesite " + HelperOperacije.odrediRedniBroj(n) + " mjernu postaju");
 
-            Mjesto mjesto = pomocnaMetodaZapostavljanjeMjesta(unos);
+            Mjesto mjesto = pomocnaMetodaZapostavljanjeMjesta(unos, mjernePostaje);
             GeografskaTocka geografskaTocka = unesiGeografskuTocku(unos);
-            Senzor[] senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
+            List<Senzor> senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
             RadioSondaznaMjernaPostaja radioSondaznamjernaPostaja = unesiRadioSondaznuMjernuPostaju
                                                             (unos, mjesto, geografskaTocka, senzori);
 
@@ -47,9 +48,9 @@ public class HelperPostavljanje {
     /**
      * pomoćna statična klasa za postavljanje podataka mjesta
      */
-    private static Mjesto pomocnaMetodaZapostavljanjeMjesta(Scanner unos){
+    private static Mjesto pomocnaMetodaZapostavljanjeMjesta(Scanner unos, List<MjernaPostaja> mjernePostaje){
         Drzava drzava = unesiDrzavu(unos);
-        Zupanija zupanija = unesiZupaniju(unos, drzava);
+        Zupanija zupanija = unesiZupaniju(unos, drzava, mjernePostaje);
         Mjesto mjesto = unesiMjesto(unos, zupanija);
 
         return mjesto;
@@ -60,11 +61,16 @@ public class HelperPostavljanje {
      * @param unos
      * @return
      */
-    private static Senzor[] pomocnaMetodaZapostavljanjeSenzora(Scanner unos){
+    private static List<Senzor> pomocnaMetodaZapostavljanjeSenzora(Scanner unos){
         SenzorTemperature senzorTemperature = unesiSenzorTemperature(unos);
         SenzorVjetra senzorVjetra = unesiSenzorVjetra(unos);
         SenzorVlage senzorVlage = unesiSenzorVlage(unos);
-        Senzor[] senzori = {senzorVlage, senzorVjetra, senzorTemperature};
+
+        List<Senzor> senzori = new ArrayList<Senzor>();
+
+        senzori.add(senzorTemperature);
+        senzori.add(senzorVjetra);
+        senzori.add(senzorVlage);
 
         return senzori;
     }

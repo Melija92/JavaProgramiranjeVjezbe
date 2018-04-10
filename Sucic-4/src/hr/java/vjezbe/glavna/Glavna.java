@@ -13,6 +13,7 @@ import java.util.*;
 import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiSenzoreKojiPostojeUJednomMjestu;
 import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiZupanijeBezDuplikataAbecedno;
 import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde;
+import static hr.java.vjezbe.ispisivanje.HelperTestniPodaci.napraviTestnePodatke;
 
 public class Glavna {
 	private static final int BROJ_MJERNIH_POSTAJA = 5;
@@ -22,8 +23,10 @@ public class Glavna {
 	public static void main(String[] args) {
 		List<MjernaPostaja> listaMjernihPostaja = new ArrayList<MjernaPostaja>();
 
-		listaMjernihPostaja = HelperPostavljanje.postaviMjernePostaje
-				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, listaMjernihPostaja);
+//		listaMjernihPostaja = HelperPostavljanje.postaviMjernePostaje
+//				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, listaMjernihPostaja);
+
+		listaMjernihPostaja = napraviTestnePodatke();
 
 		ispisiPodatkeSvihMjernihPostaja(listaMjernihPostaja);
 

@@ -6,7 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static hr.java.vjezbe.glavna.HelperUnosenje.*;
+import static hr.java.vjezbe.unosenje.UnosenjeLokacija.*;
+import static hr.java.vjezbe.unosenje.UnosenjeMjernihPostaja.unesiMjernuPostaju;
+import static hr.java.vjezbe.unosenje.UnosenjeMjernihPostaja.unesiRadioSondaznuMjernuPostaju;
+import static hr.java.vjezbe.unosenje.UnosenjeSenzora.unesiSenzorTemperature;
+import static hr.java.vjezbe.unosenje.UnosenjeSenzora.unesiSenzorVjetra;
+import static hr.java.vjezbe.unosenje.UnosenjeSenzora.unesiSenzorVlage;
 
 /**
  * predstavlja entitet za pomoćnu klasu za postavljanje
@@ -22,9 +27,9 @@ public class HelperPostavljanje {
             System.out.println("Unesite " + HelperOperacije.odrediRedniBroj(i) + " mjernu postaju");
 
             Mjesto mjesto = pomocnaMetodaZapostavljanjeMjesta(unos, mjernePostaje);
-//            GeografskaTocka geografskaTocka = unesiGeografskuTocku(unos);
-//            List<Senzor> senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
-            MjernaPostaja mjernaPostaja = unesiMjernuPostaju(unos, mjesto, null, null);
+            GeografskaTocka geografskaTocka = unesiGeografskuTocku(unos);
+            List<Senzor> senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
+            MjernaPostaja mjernaPostaja = unesiMjernuPostaju(unos, mjesto, geografskaTocka, senzori, mjernePostaje);
 
             mjernePostaje.add(mjernaPostaja);
         }
@@ -36,7 +41,7 @@ public class HelperPostavljanje {
             GeografskaTocka geografskaTocka = unesiGeografskuTocku(unos);
             List<Senzor> senzori = pomocnaMetodaZapostavljanjeSenzora(unos);
             RadioSondaznaMjernaPostaja radioSondaznamjernaPostaja = unesiRadioSondaznuMjernuPostaju
-                                                            (unos, mjesto, geografskaTocka, senzori);
+                                                            (unos, mjesto, geografskaTocka, senzori, mjernePostaje);
 
             mjernePostaje.add(radioSondaznamjernaPostaja);
         }
@@ -51,7 +56,7 @@ public class HelperPostavljanje {
     private static Mjesto pomocnaMetodaZapostavljanjeMjesta(Scanner unos, List<MjernaPostaja> mjernePostaje){
         Drzava drzava = unesiDrzavu(unos);
         Zupanija zupanija = unesiZupaniju(unos, drzava, mjernePostaje);
-        Mjesto mjesto = unesiMjesto(unos, zupanija);
+        Mjesto mjesto = unesiMjesto(unos, zupanija, mjernePostaje);
 
         return mjesto;
     }

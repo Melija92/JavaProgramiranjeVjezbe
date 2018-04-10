@@ -4,11 +4,15 @@ import hr.java.vjezbe.entitet.*;
 import hr.java.vjezbe.iznimke.NiskaTemperaturaException;
 import hr.java.vjezbe.iznimke.VisokaTemperaturaException;
 
+import hr.java.vjezbe.sortiranje.ZupanijaSorter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
+import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiSenzoreKojiPostojeUJednomMjestu;
+import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiZupanijeBezDuplikataAbecedno;
+import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde;
 
 public class Glavna {
 	private static final int BROJ_MJERNIH_POSTAJA = 5;
@@ -21,38 +25,27 @@ public class Glavna {
 		listaMjernihPostaja = HelperPostavljanje.postaviMjernePostaje
 				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, listaMjernihPostaja);
 
-		ispisiPodatke(listaMjernihPostaja);
+		ispisiPodatkeSvihMjernihPostaja(listaMjernihPostaja);
 
-		while (true){
-			for (MjernaPostaja mjernaPostaja: listaMjernihPostaja) {
-				for (Senzor senzor: mjernaPostaja.dohvatiSenzore()) {
-					if(senzor instanceof SenzorTemperature){
-						try{
-							((SenzorTemperature)senzor).generirajVrijednost();
-							System.out.println();
-							Thread.sleep(1000);
-						}
-						catch (NiskaTemperaturaException | VisokaTemperaturaException | InterruptedException ex){
-							logger.info("Pogreška na postaji - " + mjernaPostaja.getNaziv() + " " + ex.getMessage(), ex);
-						}
-					}
-				}
-			}
-		}
+		ispisiZupanijeBezDuplikataAbecedno(listaMjernihPostaja);
+
+		ispisiSenzoreKojiPostojeUJednomMjestu(listaMjernihPostaja);
+
+		//ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(listaMjernihPostaja);
 	}
 
 	/**
 	 * ispisuje podatke mjernih postaja
 	 * @param mjernePostaje
 	 */
-	private static void ispisiPodatke(List<MjernaPostaja> mjernePostaje) {
+	private static void ispisiPodatkeSvihMjernihPostaja(List<MjernaPostaja> mjernePostaje) {
 		for (MjernaPostaja mjernaPostaja : mjernePostaje) {
 			System.out.println("Naziv mjerne postaje: " + mjernaPostaja.getNaziv());
 
 			mjernaPostaja = provjeriIIspisiJeLiRadioSondazna(mjernaPostaja);
 			
 			System.out.println("Postaja se nalazi u mjestu " 
-			+ mjernaPostaja.getMjesto().getNaziv() + ", "
+			+ mjernaPostaja.getMjesto().getNaziv() + " (" +  mjernaPostaja.getMjesto().getVrstaMjesta() + ") " + ", "
 			+ "županiji " + mjernaPostaja.getMjesto().getZupanija().getNaziv() + ", "
 			+ "državi " + mjernaPostaja.getMjesto().getZupanija().getDrzava().getNaziv());
 			
@@ -66,7 +59,6 @@ public class Glavna {
 			for (Senzor senzor : sortiraniSenzori) {
 				System.out.println(senzor.dohvatiPodatkeSenzora());
 			}
-
 			System.out.println("---------------------------------------------------");
 		}
 	}

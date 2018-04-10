@@ -1,6 +1,8 @@
 package hr.java.vjezbe.glavna;
 
 import java.math.BigDecimal;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /**
  * predstavlja entitet za pomoće izračune kao pomoćna klasa u aplikaciji
@@ -185,5 +187,43 @@ public class HelperOperacije {
                     break;
             }
         return preciznost;
+    }
+
+    public static BigDecimal vratiBigDecimal(Scanner unos){
+        BigDecimal varijablaBigDecimal = null;
+        boolean nastaviPetlju;
+        do {
+            try {
+                varijablaBigDecimal = unos.nextBigDecimal();
+                unos.nextLine();
+                nastaviPetlju = false;
+            }
+            catch (InputMismatchException ex){
+                System.out.println("Unijeli ste krivo, ponovite unos");
+                unos.nextLine();
+                nastaviPetlju = true;
+            }
+        }while (nastaviPetlju);
+
+        return varijablaBigDecimal;
+    }
+
+    public static Integer vratiInteger(Scanner unos){
+        Integer varijablaInteger = null;
+        boolean nastaviPetlju;
+        do {
+            try {
+                varijablaInteger = unos.nextInt();
+                unos.nextLine();
+                nastaviPetlju = false;
+            }
+            catch (InputMismatchException ex){
+                System.out.println("Unijeli ste krivo, ponovite unos");
+                unos.nextLine();
+                nastaviPetlju = true;
+            }
+        }while (nastaviPetlju);
+
+        return varijablaInteger;
     }
 }

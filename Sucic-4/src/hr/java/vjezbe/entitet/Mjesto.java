@@ -1,5 +1,8 @@
 package hr.java.vjezbe.entitet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * predstavlja entitet mjesta s atributima naziva i reference na županiju
  */
@@ -7,6 +10,7 @@ public class Mjesto {
 	private String naziv;
 	private Zupanija zupanija;
 	private VrstaMjesta vrstaMjesta;
+	private List<MjernaPostaja> listaMjernihPostaja;
 
 	/**
 	 * prima parametre naziva i reference na županiju
@@ -17,6 +21,7 @@ public class Mjesto {
 		this.naziv = naziv;
 		this.zupanija = zupanija;
 		this.vrstaMjesta = vrstaMjesta;
+		listaMjernihPostaja = new ArrayList<MjernaPostaja>();
 	}
 	
 	public String getNaziv() {
@@ -40,5 +45,9 @@ public class Mjesto {
 
 	public void setVrstaMjesta(VrstaMjesta vrstaMjesta) {
 		this.vrstaMjesta = vrstaMjesta;
+	}
+
+	public List<MjernaPostaja> getListaMjernihPostaja() {
+		return listaMjernihPostaja;
 	}
 }

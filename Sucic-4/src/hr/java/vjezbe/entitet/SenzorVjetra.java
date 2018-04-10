@@ -25,7 +25,8 @@ public class SenzorVjetra extends Senzor {
      */
     @Override
     public String dohvatiPodatkeSenzora() {
-        return "Senzor vjetra\n Veličina senzora: " + getVelicinaSenzora() + ", " + getVrijednost() + getMjernaJedinica();
+        return "Senzor vjetra\n Veličina senzora: " + getVelicinaSenzora() + ", " + getVrijednost() + getMjernaJedinica()
+                + "\nRad senzora je: " + getRadSenzora();
     }
 
     public String getVelicinaSenzora() {

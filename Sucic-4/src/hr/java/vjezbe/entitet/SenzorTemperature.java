@@ -11,7 +11,6 @@ import java.util.Random;
  * predstavlja entitet senzora temperature
  */
 public class SenzorTemperature extends Senzor {
-
     private String elektronickaKomponenta;
 
     /**
@@ -27,7 +26,8 @@ public class SenzorTemperature extends Senzor {
 
     @Override
     public String dohvatiPodatkeSenzora() {
-        return "Senzor temperature\n Komponenta: " +  getElektronickaKomponenta() + ", " + "vrijednost: " + getVrijednost() + getMjernaJedinica();
+        return "Senzor temperature\n Komponenta: " +  getElektronickaKomponenta() + ", " + "vrijednost: " + getVrijednost() + getMjernaJedinica()
+                + "\nRad senzora je: " + getRadSenzora();
     }
 
     /**

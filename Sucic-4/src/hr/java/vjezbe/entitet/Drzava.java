@@ -9,10 +9,8 @@ import java.util.List;
  */
 public class Drzava {
 	private String naziv;
-
 	private BigDecimal povrsina;
-
-	public List<Zupanija> zupanije;
+	private List<Zupanija> listaZupanije;
 
 	/**
 	 * prima parametre naziva i površine koje sprema u pripadajuće varijable
@@ -22,7 +20,7 @@ public class Drzava {
 	public Drzava(String naziv, BigDecimal povrsina) {
 		this.naziv = naziv;
 		this.povrsina = povrsina;
-		zupanije = new ArrayList<Zupanija>();
+		listaZupanije = new ArrayList<Zupanija>();
 	}
 	
 	public String getNaziv() {
@@ -41,7 +39,7 @@ public class Drzava {
 		this.povrsina = povrsina;
 	}
 
-	public List<Zupanija> getZupanije() {
-		return zupanije;
+	public List<Zupanija> getListaZupanije() {
+		return listaZupanije;
 	}
 }

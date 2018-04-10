@@ -1,11 +1,15 @@
 package hr.java.vjezbe.entitet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * predstavlja entitet županije
  */
 public class Zupanija {
 	private String naziv;
 	private Drzava drzava;
+	private List<Mjesto> listaMjesta;
 
 	/**
 	 * prima parametre naziva županije i referencu na državu
@@ -15,6 +19,7 @@ public class Zupanija {
 	public Zupanija(String naziv, Drzava drzava) {
 		this.naziv = naziv;
 		this.drzava = drzava;
+		listaMjesta = new ArrayList<Mjesto>();
 	}
 	
 	public String getNaziv() {
@@ -31,5 +36,9 @@ public class Zupanija {
 
 	public void setDrzava(Drzava drzava) {
 		this.drzava = drzava;
+	}
+
+	public List<Mjesto> getListaMjesta() {
+		return listaMjesta;
 	}
 }

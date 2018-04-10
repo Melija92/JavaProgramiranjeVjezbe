@@ -17,6 +17,7 @@ public class SenzorVlage extends Senzor {
 
     @Override
     public String dohvatiPodatkeSenzora() {
-        return "Senzor vlage\n Vrijednost: " + getVrijednost() + getMjernaJedinica() + " vlage zraka";
+        return "Senzor vlage\n Vrijednost: " + getVrijednost() + getMjernaJedinica() + " vlage zraka"
+                + "\nRad senzora je: " + getRadSenzora();
     }
 }

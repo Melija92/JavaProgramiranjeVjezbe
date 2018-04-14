@@ -1,6 +1,7 @@
 package hr.java.vjezbe.glavna;
 
 import hr.java.vjezbe.entitet.RadSenzora;
+import hr.java.vjezbe.entitet.VelicinaMjesta;
 import hr.java.vjezbe.entitet.VrstaMjesta;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -67,5 +68,34 @@ public class HelperEnumUnosenje {
         }
 
         return radSenzora;
+    }
+
+    public static VelicinaMjesta unosVelicineMjesta(Scanner unos){
+        VelicinaMjesta velicinaMjesta;
+
+        for (int i = 0; i < VelicinaMjesta.values().length - 1 ; i++) {
+            System.out.println((i + 1) +  ". " + VelicinaMjesta.values()[i]);
+        }
+        Integer redniBrojVelicineMjesta = null;
+        while (true){
+            System.out.println("Odaberi velicinu mjesta");
+            try{
+                redniBrojVelicineMjesta = unos.nextInt();
+                unos.nextLine();
+                break;
+            }
+            catch(InputMismatchException ex){
+                System.out.println("Neispravan unos vrste mjesta");
+                unos.nextLine();
+                logger.error("Neispravan unos mjesta", ex);
+            }
+        }
+        if(redniBrojVelicineMjesta >= 1 && redniBrojVelicineMjesta < VelicinaMjesta.values().length){
+            velicinaMjesta = VelicinaMjesta.values()[redniBrojVelicineMjesta - 1];
+        } else{
+            velicinaMjesta = VelicinaMjesta.OSTALO;
+        }
+
+        return velicinaMjesta;
     }
 }

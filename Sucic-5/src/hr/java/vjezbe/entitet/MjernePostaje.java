@@ -1,5 +1,7 @@
 package hr.java.vjezbe.entitet;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MjernePostaje<T extends MjernaPostaja> {
@@ -18,7 +20,10 @@ public class MjernePostaje<T extends MjernaPostaja> {
         listaMjernihPostaja.add(mjernaPostaja);
     }
 
-    public List<T> getSortedList(T listaMjernihPostaja){
-        
+    public List<T> getSortedList(List<T> listaMjernihPostaja){
+        Collections.sort(listaMjernihPostaja, (T m1, T m2) ->
+        m1.getNaziv().compareTo(m2.getNaziv()));
+
+        return listaMjernihPostaja;
     }
 }

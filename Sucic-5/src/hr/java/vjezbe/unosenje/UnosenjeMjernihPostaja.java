@@ -13,11 +13,12 @@ public class UnosenjeMjernihPostaja {
      * pomoćna statična metoda za unos mjerne postaje
      */
     public static MjernaPostaja unesiMjernuPostaju(Scanner unosMjernePostaje,
-                                                   Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori, List<MjernaPostaja> postaje) {
+                   Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori, MjernePostaje<MjernaPostaja> postajeObjekt) {
         System.out.println("Unesite naziv mjerne postaje");
         String naziv = unosMjernePostaje.nextLine();
         MjernaPostaja mjernaPostaja;
 
+        List<MjernaPostaja> postaje = postajeObjekt.getSortedList();
         Optional<MjernaPostaja> postaja = postaje.stream().filter(p -> p.getMjesto().getNaziv()
                 .equals(mjesto.getNaziv())).findFirst();
 
@@ -38,12 +39,13 @@ public class UnosenjeMjernihPostaja {
      * pomoćna statična metoda za unos radio sondažne mjerne postaje
      */
     public static RadioSondaznaMjernaPostaja unesiRadioSondaznuMjernuPostaju(Scanner unosMjernePostaje,
-                                                                             Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori, List<MjernaPostaja> postaje) {
+                             Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori, MjernePostaje<MjernaPostaja> postajeObjekt) {
         System.out.println("Unesite naziv radio sondažne mjerne postaje");
         String naziv = unosMjernePostaje.nextLine();
         RadioSondaznaMjernaPostaja radioSondaznaMjernaPostaja;
         Integer visina = vratiInteger(unosMjernePostaje);
 
+        List<MjernaPostaja> postaje = postajeObjekt.getSortedList();
         Optional<MjernaPostaja> postaja = postaje.stream().filter(p -> p.getMjesto().getNaziv()
                 .equals(mjesto.getNaziv())).findFirst();
 

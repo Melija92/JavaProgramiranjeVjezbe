@@ -13,9 +13,9 @@ import java.util.*;
 public class HelperIspisivanje {
     private static final Logger logger = LoggerFactory.getLogger(Glavna.class);
 
-    public static void ispisiZupanijeBezDuplikataAbecedno(List<MjernaPostaja> listaMjernihPostaja){
+    public static void ispisiZupanijeBezDuplikataAbecedno(MjernePostaje<MjernaPostaja> listaMjernihPostaja){
         List<Zupanija> listaZupanijaZaIspis = new ArrayList<>();
-        for (MjernaPostaja mjernaPostaja: listaMjernihPostaja) {
+        for (MjernaPostaja mjernaPostaja: listaMjernihPostaja.getSortedList()) {
             Zupanija zupanija = mjernaPostaja.getMjesto().getZupanija();
             if(!listaZupanijaZaIspis.contains(zupanija))
                 listaZupanijaZaIspis.add(zupanija);
@@ -30,9 +30,9 @@ public class HelperIspisivanje {
     }
 
 
-    public static void ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(List<MjernaPostaja> listaMjernihPostaja){
+    public static void ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(MjernePostaje<MjernaPostaja> listaMjernihPostaja){
         while (true){
-            for (MjernaPostaja mjernaPostaja: listaMjernihPostaja) {
+            for (MjernaPostaja mjernaPostaja: listaMjernihPostaja.getSortedList()) {
                 for (Senzor senzor: mjernaPostaja.dohvatiSenzore()) {
                     if(senzor instanceof SenzorTemperature){
                         try{
@@ -49,10 +49,10 @@ public class HelperIspisivanje {
         }
     }
 
-    public static void ispisiSenzoreKojiPostojeUJednomMjestu(List<MjernaPostaja> listaMjernihPostaja){
+    public static void ispisiSenzoreKojiPostojeUJednomMjestu(MjernePostaje<MjernaPostaja> listaMjernihPostaja){
         Map<Mjesto, List<Senzor>> mapaMjestaISenzora = new HashMap<>();
 
-        for (MjernaPostaja mjernaPostaja : listaMjernihPostaja){
+        for (MjernaPostaja mjernaPostaja : listaMjernihPostaja.getSortedList()){
             mapaMjestaISenzora.put(mjernaPostaja.getMjesto(), mjernaPostaja.dohvatiSenzore());
         }
 

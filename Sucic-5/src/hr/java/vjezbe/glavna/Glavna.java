@@ -21,7 +21,8 @@ public class Glavna {
 	private static final Logger logger = LoggerFactory.getLogger(Glavna.class);
 
 	public static void main(String[] args) {
-		List<MjernaPostaja> listaMjernihPostaja = new ArrayList<MjernaPostaja>();
+		MjernePostaje<MjernaPostaja> listaMjernihPostaja = new MjernePostaje<>();
+		//		List<MjernaPostaja> listaMjernihPostaja = new ArrayList<MjernaPostaja>();
 
 //		listaMjernihPostaja = HelperPostavljanje.postaviMjernePostaje
 //				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, listaMjernihPostaja);
@@ -34,58 +35,41 @@ public class Glavna {
 
 		ispisiSenzoreKojiPostojeUJednomMjestu(listaMjernihPostaja);
 
-		//ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(listaMjernihPostaja);
+//		ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(listaMjernihPostaja);
 	}
 
 	/**
 	 * ispisuje podatke mjernih postaja
+	 *
 	 * @param mjernePostaje
 	 */
-	private static void ispisiPodatkeSvihMjernihPostaja(List<MjernaPostaja> mjernePostaje) {
-		for (MjernaPostaja mjernaPostaja : mjernePostaje) {
-			System.out.println("Naziv mjerne postaje: " + mjernaPostaja.getNaziv());
+	private static void ispisiPodatkeSvihMjernihPostaja(MjernePostaje<MjernaPostaja> mjernePostaje) {
 
-			mjernaPostaja = provjeriIIspisiJeLiRadioSondazna(mjernaPostaja);
-			
-			System.out.println("Postaja se nalazi u mjestu " 
-			+ mjernaPostaja.getMjesto().getNaziv() + " (" +  mjernaPostaja.getMjesto().getVrstaMjesta() + ") " + ", "
-			+ "županiji " + mjernaPostaja.getMjesto().getZupanija().getNaziv() + ", "
-			+ "državi " + mjernaPostaja.getMjesto().getZupanija().getDrzava().getNaziv());
-			
-			System.out.println("Točne koorinate postaje su x:" 
-			+ mjernaPostaja.getGeografskaTocka().getX()
-			+ " " + "y:" 
-			+ mjernaPostaja.getGeografskaTocka().getY());
-
-			List<Senzor> sortiraniSenzori = mjernaPostaja.dohvatiSenzore();
-			System.out.println("Vrijednosti senzora postaje su:");
-			for (Senzor senzor : sortiraniSenzori) {
-				System.out.println(senzor.dohvatiPodatkeSenzora());
+		mjernePostaje.getSortedList().forEach(a -> {
+			if (a instanceof RadioSondaznaMjernaPostaja) {
+				RadioSondaznaMjernaPostaja radioSondaznaMjernaPostaja = (RadioSondaznaMjernaPostaja) a;
+				Integer visinaPostaje = radioSondaznaMjernaPostaja.dohvatiVisinuPostaje();
+				System.out.println("Postaja je radio sondažna!!!");
+				System.out.println("Visina radio sondažne postaje: " + visinaPostaje);
+				radioSondaznaMjernaPostaja.povecajVisinu(visinaPostaje);
+				System.out.println("Nova visina radio sondažne mjerne postaje je: "
+						+ radioSondaznaMjernaPostaja.dohvatiVisinuPostaje());
+				System.out.println("Naziv mjerne postaje: " + a.getNaziv());
 			}
+			System.out.println("Postaja se nalazi u mjestu " + a.getMjesto().getNaziv()
+					+ " (" + a.getMjesto().getVrstaMjesta() + ") " + ", "
+					+ "županiji " + a.getMjesto().getZupanija().getNaziv() + ", "
+					+ "državi " + a.getMjesto().getZupanija().getDrzava().getNaziv());
+			System.out.println("Točne koorinate postaje su x:"
+					+ a.getGeografskaTocka().getX()
+					+ " " + "y:"
+					+ a.getGeografskaTocka().getY());
+
+			List<Senzor> sortiraniSenzori = a.dohvatiSenzore();
+			System.out.println("Vrijednosti senzora postaje su:");
+			sortiraniSenzori.forEach(b -> System.out.println(b.dohvatiPodatkeSenzora()));
 			System.out.println("---------------------------------------------------");
-		}
-	}
 
-	/**
-	 * pomoćna metoda za provjeru je li mjerna postaja radio sondažna te ispis njenih podataka
-	 * @param mjernaPostaja
-	 * @return
-	 */
-	private static MjernaPostaja provjeriIIspisiJeLiRadioSondazna(MjernaPostaja mjernaPostaja){
-		if(mjernaPostaja instanceof RadioSondaznaMjernaPostaja){
-			RadioSondaznaMjernaPostaja radioSondaznaMjernaPostaja = (RadioSondaznaMjernaPostaja)mjernaPostaja;
-			Integer visinaPostaje = radioSondaznaMjernaPostaja.dohvatiVisinuPostaje();
-
-			System.out.println("Postaja je radio sondažna");
-			System.out.println("Visina radio sondažne postaje: " + visinaPostaje);
-
-			radioSondaznaMjernaPostaja.povecajVisinu(visinaPostaje);
-			System.out.println("Nova visina radio sondažne mjerne postaje je: "
-					+ radioSondaznaMjernaPostaja.dohvatiVisinuPostaje());
-
-			return radioSondaznaMjernaPostaja;
-		}
-
-		return mjernaPostaja;
+		});
 	}
 }

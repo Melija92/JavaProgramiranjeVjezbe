@@ -17,8 +17,8 @@ import static hr.java.vjezbe.unosenje.UnosenjeSenzora.unesiSenzorVlage;
  * predstavlja entitet za pomoćnu klasu za postavljanje
  */
 public class HelperPostavljanje {
-    public static List<MjernaPostaja> postaviMjernePostaje
-            (int BROJ_MJERNIH_POSTAJA, int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, List<MjernaPostaja> mjernePostaje){
+    public static MjernePostaje<MjernaPostaja> postaviMjernePostaje
+            (int BROJ_MJERNIH_POSTAJA, int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, MjernePostaje<MjernaPostaja> mjernePostaje){
 
         Scanner unos = new Scanner(System.in);
         Integer ukupanBrojPostaja = BROJ_MJERNIH_POSTAJA + BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA;
@@ -53,7 +53,7 @@ public class HelperPostavljanje {
     /**
      * pomoćna statična klasa za postavljanje podataka mjesta
      */
-    private static Mjesto pomocnaMetodaZapostavljanjeMjesta(Scanner unos, List<MjernaPostaja> mjernePostaje){
+    private static Mjesto pomocnaMetodaZapostavljanjeMjesta(Scanner unos, MjernePostaje<MjernaPostaja> mjernePostaje){
         Drzava drzava = unesiDrzavu(unos);
         Zupanija zupanija = unesiZupaniju(unos, drzava, mjernePostaje);
         Mjesto mjesto = unesiMjesto(unos, zupanija, mjernePostaje);

@@ -33,11 +33,12 @@ public class UnosenjeLokacija {
     /**
      * pomoćna statična metoda za unos županije
      */
-    public static Zupanija unesiZupaniju(Scanner unosZupanije, Drzava drzava, List<MjernaPostaja> postaje) {
+    public static Zupanija unesiZupaniju(Scanner unosZupanije, Drzava drzava, MjernePostaje<MjernaPostaja> postajeObjekt) {
         System.out.println("Unesite naziv županije");
         String naziv = unosZupanije.nextLine();
         Zupanija zupanija;
 
+        List<MjernaPostaja> postaje = postajeObjekt.getSortedList();
         Optional<MjernaPostaja> postaja = postaje.stream().filter(p -> p.getMjesto().getZupanija()
                 .getDrzava().getNaziv().equals(drzava.getNaziv())).findFirst();
 
@@ -57,12 +58,13 @@ public class UnosenjeLokacija {
     /**
      * pomoćna statična metoda za unos mjesta
      */
-    public static Mjesto unesiMjesto(Scanner unosMjesta, Zupanija zupanija, List<MjernaPostaja> postaje) {
+    public static Mjesto unesiMjesto(Scanner unosMjesta, Zupanija zupanija, MjernePostaje<MjernaPostaja> postajeObjekt) {
         System.out.println("Unesite naziv mjesta");
         String naziv = unosMjesta.nextLine();
         VrstaMjesta vrstaMjesta = unosVrsteMjesta(unosMjesta);
         Mjesto mjesto;
 
+        List<MjernaPostaja> postaje = postajeObjekt.getSortedList();
         Optional<MjernaPostaja> postaja = postaje.stream().filter(p -> p.getMjesto().getZupanija()
                 .getNaziv().equals(zupanija.getNaziv())).findFirst();
 

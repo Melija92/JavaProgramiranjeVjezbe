@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
+import static hr.java.vjezbe.glavna.HelperEnumUnosenje.unosVelicineMjesta;
 import static hr.java.vjezbe.glavna.HelperEnumUnosenje.unosVrsteMjesta;
 import static hr.java.vjezbe.glavna.HelperOperacije.vratiBigDecimal;
 
@@ -61,6 +62,7 @@ public class UnosenjeLokacija {
         System.out.println("Unesite naziv mjesta");
         String naziv = unosMjesta.nextLine();
         VrstaMjesta vrstaMjesta = unosVrsteMjesta(unosMjesta);
+        VelicinaMjesta velicinaMjesta = unosVelicineMjesta(unosMjesta);
         Mjesto mjesto;
 
         Optional<MjernaPostaja> postaja = postaje.stream().filter(p -> p.getMjesto().getZupanija()
@@ -68,11 +70,11 @@ public class UnosenjeLokacija {
 
         if(postaja.isPresent()){
             Zupanija postjecaZupanijaIzListe = postaja.get().getMjesto().getZupanija();
-            mjesto = new Mjesto(naziv, postjecaZupanijaIzListe, vrstaMjesta);
+            mjesto = new Mjesto(naziv, postjecaZupanijaIzListe, vrstaMjesta, velicinaMjesta);
             postjecaZupanijaIzListe.getListaMjesta().add(mjesto);
         }
         else {
-            mjesto = new Mjesto(naziv, zupanija, vrstaMjesta);
+            mjesto = new Mjesto(naziv, zupanija, vrstaMjesta, velicinaMjesta);
             zupanija.getListaMjesta().add(mjesto);
         }
 

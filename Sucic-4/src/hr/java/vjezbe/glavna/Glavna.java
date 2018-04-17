@@ -9,14 +9,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
+import static hr.java.vjezbe.entitet.VelicinaMjesta.VELIKO;
 import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiSenzoreKojiPostojeUJednomMjestu;
 import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiZupanijeBezDuplikataAbecedno;
 import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde;
 import static hr.java.vjezbe.ispisivanje.HelperTestniPodaci.napraviTestnePodatke;
 
+/**
+ * predstavlja entitet glavne klase programa
+ */
 public class Glavna {
-	private static final int BROJ_MJERNIH_POSTAJA = 5;
+	private static final int BROJ_MJERNIH_POSTAJA = 1;
 	private static final int BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA = 0;
 	private static final Logger logger = LoggerFactory.getLogger(Glavna.class);
 
@@ -34,7 +40,22 @@ public class Glavna {
 
 		ispisiSenzoreKojiPostojeUJednomMjestu(listaMjernihPostaja);
 
-		//ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(listaMjernihPostaja);
+		//veliko i malo mjesto
+		listaMjernihPostaja.stream().filter(naziv -> naziv.getMjesto().getNaziv().length() > 0)
+		System.out.println(IntStream.of(listaMjernihPostaja).max());
+
+
+		//TAKEWHILE, LAMBDA, FOREACH
+		List<Mjesto> mjestaKojaImajuVeliko = new ArrayList<>();
+		for(MjernaPostaja mjernaPostaja : listaMjernihPostaja){
+			if(mjernaPostaja.getMjesto().getVelicinaMjesta() == VELIKO)
+				mjestaKojaImajuVeliko.add(mjernaPostaja.getMjesto());
+		}
+
+		Stream.of(mjestaKojaImajuVeliko).takeWhile(i ->  mjestaKojaImajuVeliko.isEmpty()).forEach(System.out::println);
+
+
+	//ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(listaMjernihPostaja);
 	}
 
 	/**
@@ -48,7 +69,8 @@ public class Glavna {
 			mjernaPostaja = provjeriIIspisiJeLiRadioSondazna(mjernaPostaja);
 			
 			System.out.println("Postaja se nalazi u mjestu " 
-			+ mjernaPostaja.getMjesto().getNaziv() + " (" +  mjernaPostaja.getMjesto().getVrstaMjesta() + ") " + ", "
+			+ mjernaPostaja.getMjesto().getNaziv() + " (" +  mjernaPostaja.getMjesto().getVrstaMjesta() + " - " +
+			mjernaPostaja.getMjesto().getVelicinaMjesta() + ") " + ", "
 			+ "županiji " + mjernaPostaja.getMjesto().getZupanija().getNaziv() + ", "
 			+ "državi " + mjernaPostaja.getMjesto().getZupanija().getDrzava().getNaziv());
 			

@@ -10,6 +10,16 @@ public class Mjesto {
 	private String naziv;
 	private Zupanija zupanija;
 	private VrstaMjesta vrstaMjesta;
+
+	public VelicinaMjesta getVelicinaMjesta() {
+		return velicinaMjesta;
+	}
+
+	public void setVelicinaMjesta(VelicinaMjesta velicinaMjesta) {
+		this.velicinaMjesta = velicinaMjesta;
+	}
+
+	private VelicinaMjesta velicinaMjesta;
 	private List<MjernaPostaja> listaMjernihPostaja;
 
 	/**
@@ -17,10 +27,11 @@ public class Mjesto {
 	 * @param naziv je naziv mjesta
 	 * @param zupanija je referenca na županiju
 	 */
-	public Mjesto(String naziv, Zupanija zupanija, VrstaMjesta vrstaMjesta) {
+	public Mjesto(String naziv, Zupanija zupanija, VrstaMjesta vrstaMjesta, VelicinaMjesta velicinaMjesta) {
 		this.naziv = naziv;
 		this.zupanija = zupanija;
 		this.vrstaMjesta = vrstaMjesta;
+		this.velicinaMjesta = velicinaMjesta;
 		listaMjernihPostaja = new ArrayList<MjernaPostaja>();
 	}
 	

@@ -1,0 +1,227 @@
+2018-04-09 20:50:16,470 ERROR [main] h.j.v.g.Glavna [HelperEnumUnosenje.java:31] Neispravan unos mjesta
+java.util.InputMismatchException: null
+	at java.base/java.util.Scanner.throwFor(Scanner.java:860)
+	at java.base/java.util.Scanner.next(Scanner.java:1497)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2161)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2115)
+	at hr.java.vjezbe.glavna.HelperEnumUnosenje.unosVrsteMjesta(HelperEnumUnosenje.java:24)
+	at hr.java.vjezbe.glavna.HelperUnosenje.unesiMjesto(HelperUnosenje.java:81)
+	at hr.java.vjezbe.glavna.HelperPostavljanje.pomocnaMetodaZapostavljanjeMjesta(HelperPostavljanje.java:54)
+	at hr.java.vjezbe.glavna.HelperPostavljanje.postaviMjernePostaje(HelperPostavljanje.java:24)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:25)
+2018-04-09 20:53:21,139 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Temperatura 44 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 44 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:22,151 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Temperatura 43 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 43 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:22,153 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -11 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -11 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:23,154 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -49 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -49 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:23,155 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -47 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -47 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:23,156 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -32 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -32 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:24,157 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -23 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -23 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:24,158 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Temperatura 42 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 42 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:25,162 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Temperatura 41 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 41 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:25,163 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Temperatura 42 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 42 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:25,165 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Temperatura 44 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 44 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:25,166 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -49 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -49 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:26,167 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -24 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -24 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:27,170 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -16 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -16 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:29,171 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -15 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -15 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:31,181 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Temperatura 45 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 45 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:31,182 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -34 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -34 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 20:53:36,184 INFO [main] h.j.v.g.Glavna [Glavna.java:49] Pogreška na postaji - openn Preniska temperatura -26 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -26 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:44)
+2018-04-09 21:03:38,640 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Temperatura 41 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 41 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:38,653 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -15 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -15 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:38,654 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -47 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -47 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:38,655 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Preniska temperatura -25 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -25 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:39,657 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -25 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -25 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:39,659 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Temperatura 43 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 43 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:40,659 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -26 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -26 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:41,661 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Temperatura 50 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 50 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:41,662 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -26 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -26 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:42,664 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -29 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -29 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:42,664 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -48 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -48 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:43,666 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -19 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -19 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:43,667 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -28 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -28 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:43,668 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Temperatura 46 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 46 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:44,670 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -38 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -38 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:44,681 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Preniska temperatura -31 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -31 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:45,682 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -47 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -47 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:45,683 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Temperatura 43 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 43 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:48,684 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -44 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -44 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:48,685 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Temperatura 42 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 42 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:49,686 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -11 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -11 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:49,696 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Temperatura 42 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 42 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:51,698 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -16 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -16 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:51,700 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Preniska temperatura -11 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -11 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:52,702 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Preniska temperatura -46 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -46 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:53,703 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -26 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -26 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:55,705 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -38 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -38 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:59,708 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Temperatura 49 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 49 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:03:59,708 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Temperatura 46 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 46 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:04:00,709 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Preniska temperatura -15 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -15 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:04:00,710 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -19 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -19 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:04:01,711 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Temperatura 44 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 44 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:04:01,711 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -20 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -20 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:04:01,711 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 1 Temperatura 41 je previsoka
+hr.java.vjezbe.iznimke.VisokaTemperaturaException: Temperatura 41 je previsoka
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:50)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:04:01,711 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 2 Preniska temperatura -48 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -48 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)
+2018-04-09 21:04:01,712 INFO [main] h.j.v.g.Glavna [Glavna.java:51] Pogreška na postaji - 3 Preniska temperatura -11 je preniska
+hr.java.vjezbe.iznimke.NiskaTemperaturaException: Preniska temperatura -11 je preniska
+	at hr.java.vjezbe.entitet.SenzorTemperature.generirajVrijednost(SenzorTemperature.java:53)
+	at hr.java.vjezbe.glavna.Glavna.main(Glavna.java:46)

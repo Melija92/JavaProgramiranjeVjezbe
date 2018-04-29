@@ -21,20 +21,20 @@ public class Glavna {
 	private static final Logger logger = LoggerFactory.getLogger(Glavna.class);
 
 	public static void main(String[] args) {
-		MjernePostaje<MjernaPostaja> listaMjernihPostaja = new MjernePostaje<>();
-		//		List<MjernaPostaja> listaMjernihPostaja = new ArrayList<MjernaPostaja>();
-
+//		MjernePostaje<MjernaPostaja> listaMjernihPostaja = new MjernePostaje<>();
+//				List<MjernaPostaja> listaMjernihPostaja = new ArrayList<MjernaPostaja>();
+//
 //		listaMjernihPostaja = HelperPostavljanje.postaviMjernePostaje
 //				(BROJ_MJERNIH_POSTAJA, BROJ_RADIO_SONDAZNIH_MJERNIH_POSTAJA, listaMjernihPostaja);
-
-		listaMjernihPostaja = napraviTestnePodatke();
-
-		ispisiPodatkeSvihMjernihPostaja(listaMjernihPostaja);
-
-		ispisiZupanijeBezDuplikataAbecedno(listaMjernihPostaja);
-
-		ispisiSenzoreKojiPostojeUJednomMjestu(listaMjernihPostaja);
-
+//
+//		listaMjernihPostaja = napraviTestnePodatke();
+//
+//		ispisiPodatkeSvihMjernihPostaja(listaMjernihPostaja);
+//
+//		ispisiZupanijeBezDuplikataAbecedno(listaMjernihPostaja);
+//
+//		ispisiSenzoreKojiPostojeUJednomMjestu(listaMjernihPostaja);
+//
 //		ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(listaMjernihPostaja);
 	}
 
@@ -43,7 +43,7 @@ public class Glavna {
 	 *
 	 * @param mjernePostaje
 	 */
-	private static void ispisiPodatkeSvihMjernihPostaja(MjernePostaje<MjernaPostaja> mjernePostaje) {
+	public static void ispisiPodatkeSvihMjernihPostaja(MjernePostaje<MjernaPostaja> mjernePostaje) {
 
 		mjernePostaje.getSortedList().forEach(a -> {
 			if (a instanceof RadioSondaznaMjernaPostaja) {

@@ -2,6 +2,7 @@ package hr.java.vjezbe.entitet;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * predstavlja entitet mjernepostaje s atributima nazivom, referencom na mjesto, graficku tocku te polje senzora
@@ -22,7 +23,16 @@ public class MjernaPostaja extends BazniEntitet{
 	 * @param geografskaTocka je referenca na geografsku točku
 	 * @param senzori je polje senzora
 	 */
-	public MjernaPostaja(String naziv, Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori) {
+    public MjernaPostaja(String naziv, Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori) {
+        super();
+        this.naziv = naziv;
+        this.mjesto = mjesto;
+        this.geografskaTocka = geografskaTocka;
+        this.senzori = senzori;
+    }
+
+	public MjernaPostaja(String naziv, Mjesto mjesto, GeografskaTocka geografskaTocka, List<Senzor> senzori, int id) {
+		super(id);
 		this.naziv = naziv;
 		this.mjesto = mjesto;
 		this.geografskaTocka = geografskaTocka;
@@ -37,6 +47,14 @@ public class MjernaPostaja extends BazniEntitet{
 		senzori.sort((a, b) -> a.getMjernaJedinica().compareTo(b.getMjernaJedinica()));
 
 		return senzori;
+	}
+
+	public Optional<Senzor> vratiSenzorPoIdu(Integer id){
+		Optional<Senzor> senzor = senzori.stream()
+										  .filter(a -> a.getId() == id)
+										  .findFirst();
+
+		return senzor;
 	}
 
 

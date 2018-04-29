@@ -16,6 +16,13 @@ public class GeografskaTocka extends BazniEntitet {
 	 * @param y je koordinata y točke
 	 */
 	public GeografskaTocka(BigDecimal x, BigDecimal y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+
+	public GeografskaTocka(BigDecimal x, BigDecimal y, int id) {
+		super(id);
 		this.x = x;
 		this.y = y;
 	}

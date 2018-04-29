@@ -17,7 +17,15 @@ public class Mjesto extends BazniEntitet{
 	 * @param naziv je naziv mjesta
 	 * @param zupanija je referenca na županiju
 	 */
-	public Mjesto(String naziv, Zupanija zupanija, VrstaMjesta vrstaMjesta) {
+    public Mjesto(String naziv, Zupanija zupanija, VrstaMjesta vrstaMjesta) {
+        super();
+        this.naziv = naziv;
+        this.zupanija = zupanija;
+        this.vrstaMjesta = vrstaMjesta;
+        listaMjernihPostaja = new ArrayList<MjernaPostaja>();
+    }
+	public Mjesto(String naziv, Zupanija zupanija, VrstaMjesta vrstaMjesta, int id) {
+		super(id);
 		this.naziv = naziv;
 		this.zupanija = zupanija;
 		this.vrstaMjesta = vrstaMjesta;

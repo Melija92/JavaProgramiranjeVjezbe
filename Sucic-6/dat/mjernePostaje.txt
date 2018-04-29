@@ -1,0 +1,21 @@
+1
+Siget postaja
+2
+2
+Slovenija
+3
+1
+Klarina postaja
+4
+3
+Velika argentinska postaja
+3
+4
+Mala postaja
+4
+2
+Najveca postaja
+2
+3
+Pescenica postaja
+2

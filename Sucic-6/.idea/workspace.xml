@@ -20,62 +20,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Senzor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Senzor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Senzor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BazniEntitet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/BazniEntitet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="503">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="16" />
               <folding>
-                <element signature="e#84#85#0" expanded="true" />
-                <element signature="e#109#110#0" expanded="true" />
-                <element signature="e#142#143#0" expanded="true" />
-                <element signature="e#170#171#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Drzava.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Drzava.java">
+      <file leaf-file-name="HelperTestniPodaci.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/HelperTestniPodaci.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+            <state relative-caret-position="561">
+              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeografskaTocka.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/GeografskaTocka.java">
+      <file leaf-file-name="GlavnaDatoteke.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/GlavnaDatoteke.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            <state relative-caret-position="919">
+              <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MjernaPostaja.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernaPostaja.java">
+      <file leaf-file-name="Glavna.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            <state relative-caret-position="321">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mjesto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Mjesto.java">
+      <file leaf-file-name="MjernePostaje.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernePostaje.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="425">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SenzorTemperature.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelperOperacije.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperOperacije.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-493">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SenzorVlage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVlage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SenzorVjetra.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVjetra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -88,6 +118,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Singleton" />
       </list>
     </option>
   </component>
@@ -113,6 +144,9 @@
       <find>ZupanijaSorter</find>
       <find>ispisiZupanijeBezDuplikataAbecedno</find>
       <find>VisokaTemperaturaException</find>
+      <find>@overr</find>
+      <find>Optional</find>
+      <find>listaMjernihPostaja</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,11 +170,7 @@
         <option value="$PROJECT_DIR$/logs/pogreske.log" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperEnumUnosenje.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/hr/java/vjezbe/sortiranje/ZupanijaSorter.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Zupanija.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVjetra.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVlage.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/sortiranje/ZupanijaSorter.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperOperacije.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/unosenje/UnosenjeSenzora.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java" />
@@ -149,19 +179,24 @@
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/unosenje/UnosenjeMjernihPostaja.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/HelperIspisivanje.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/HelperTestniPodaci.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernePostaje.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/testiranje.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/iznimke/noviexception.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/prva.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/iznimke/VisokaJos.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/druga.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/BazniEntitet.java" />
-        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Drzava.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernePostaje.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/GeografskaTocka.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernaPostaja.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Mjesto.java" />
         <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Senzor.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Zupanija.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Drzava.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/BazniEntitet.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVlage.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVjetra.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java" />
+        <option value="$PROJECT_DIR$/src/hr/java/vjezbe/glavna/GlavnaDatoteke.java" />
       </list>
     </option>
   </component>
@@ -184,9 +219,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="2013" />
-    <option name="height" value="2118" />
+    <option name="x" value="-10" />
+    <option name="width" value="2100" />
+    <option name="height" value="2120" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -212,9 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,31 +291,13 @@
               <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
               <item name="ispisivanje" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Sucic-6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-6" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
-              <item name="iznimke" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sucic-6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-6" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
-              <item name="sortiranje" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sucic-6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sucic-6" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
-              <item name="unosenje" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,7 +305,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -305,7 +319,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GlavnaDatoteke">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -317,6 +331,17 @@
       <option name="MAIN_CLASS_NAME" value="hr.java.vjezbe.glavna.Glavna" />
       <module name="Sucic-5" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hr.java.vjezbe.glavna.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="GlavnaDatoteke" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hr.java.vjezbe.glavna.GlavnaDatoteke" />
+      <module name="Sucic-5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.java.vjezbe.glavna.*" />
@@ -378,8 +403,13 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Glavna" />
+      <item itemvalue="Application.GlavnaDatoteke" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GlavnaDatoteke" />
         <item itemvalue="Application.Glavna" />
       </list>
     </recent_temporary>
@@ -407,7 +437,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1610" height="1694" extended-state="0" />
+    <frame x="-8" y="0" width="1680" height="1696" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -418,52 +448,53 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32689655" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32969153" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36179632" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36133924" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3292683" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19110276" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18307322" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.47248578" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31585598" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32890576" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.55059135" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16875" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36133924" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18307322" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32896462" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.34428385" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890576" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4718888" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298292" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32759494" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32689655" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3292683" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.2759527" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.2743864" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32969153" />
       <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -472,11 +503,20 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="49" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/GlavnaDatoteke.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="69" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="listaMjernihPostaja.get(0).mjesto.zupanija.drzava.zupanije.get(0)" />
+        <watch expression="listaMjernihPostaja.listaMjernihPostaja.get(1).mjesto.zupanija" />
       </configuration>
     </watches-manager>
   </component>
@@ -490,35 +530,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperIspis.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/StringLatin1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="559" selection-start-line="559" selection-end-line="559" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="867" selection-start-line="867" selection-end-line="867" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/BufferedWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="228" selection-start-line="228" selection-end-line="228" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/Writer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -579,35 +590,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/hr/java/vjezbe/sortiranje/ZupanijaSorter.java" />
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Zupanija.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVlage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperUnosenje.java" />
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/VrstaMjesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVjetra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/unosenje/UnosenjeSenzora.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -626,13 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-119">
           <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperOperacije.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3904">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -657,34 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/unosenje/UnosenjeLokacija.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/HelperTestniPodaci.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/HelperIspisivanje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/sortiranje/ZupanijaSorter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -697,23 +645,6 @@
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/prva.java" />
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/druga.java" />
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/iznimke/VisokaJos.java" />
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/iznimke/NiskaTemperaturaException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -728,16 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernePostaje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/RadSenzora.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -745,51 +666,172 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/unosenje/UnosenjeLokacija.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/GeografskaTocka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/GlavnaDatoteke.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/httpsnet.hrdanascrna-kronikamladi-haker-iz-zapresica-priveden-na-zupanijski-sud-napadao-je-internetske-stranice-iz-cijelog-s.URL">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/VrstaMjesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Zupanija.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Mjesto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/BazniEntitet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="e#84#85#0" expanded="true" />
-            <element signature="e#109#110#0" expanded="true" />
-            <element signature="e#142#143#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Drzava.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/GeografskaTocka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        <state relative-caret-position="476">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernaPostaja.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        <state relative-caret-position="850">
+          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Mjesto.java">
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/HelperOperacije.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state relative-caret-position="-493">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVlage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/MjernePostaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/Glavna.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVjetra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/HelperTestniPodaci.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/ispisivanje/HelperIspisivanje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Senzor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="503">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavna/GlavnaDatoteke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="919">
+          <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -15,6 +15,10 @@ public class SenzorVlage extends Senzor {
         super(mjernaJedinica, preciznost, radSenzora);
     }
 
+    public SenzorVlage(String mjernaJedinica, BigDecimal preciznost, RadSenzora radSenzora, Integer id) {
+        super(mjernaJedinica, preciznost, radSenzora, id);
+    }
+
     @Override
     public String dohvatiPodatkeSenzora() {
         return "Senzor vlage\n Vrijednost: " + getVrijednost() + getMjernaJedinica() + " vlage zraka"

@@ -23,6 +23,10 @@ public class SenzorTemperature extends Senzor {
         super(mjernaJedinica, preciznost, radSenzora);
         this.elektronickaKomponenta = elektronickaKomponenta;
     }
+    public SenzorTemperature(String elektronickaKomponenta, String mjernaJedinica, BigDecimal preciznost, RadSenzora radSenzora, Integer id) {
+        super(mjernaJedinica, preciznost, radSenzora, id);
+        this.elektronickaKomponenta = elektronickaKomponenta;
+    }
 
     @Override
     public String dohvatiPodatkeSenzora() {

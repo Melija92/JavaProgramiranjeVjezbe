@@ -1,6 +1,7 @@
 package hr.java.vjezbe.entitet;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 
 /**
  * predstavlja entitet klase Senzora kao apstraktnu klasu
@@ -16,6 +17,14 @@ public abstract class Senzor extends BazniEntitet {
      * @param preciznost ozačava preciznost
      */
     public Senzor(String mjernaJedinica, BigDecimal preciznost, RadSenzora radSenzora) {
+        super();
+        this.mjernaJedinica = mjernaJedinica;
+        this.preciznost = preciznost;
+        this.radSenzora = radSenzora;
+    }
+
+    public Senzor(String mjernaJedinica, BigDecimal preciznost, RadSenzora radSenzora, int id) {
+        super(id);
         this.mjernaJedinica = mjernaJedinica;
         this.preciznost = preciznost;
         this.radSenzora = radSenzora;
@@ -52,5 +61,6 @@ public abstract class Senzor extends BazniEntitet {
 
     public void setRadSenzora(RadSenzora radSenzora) {
         this.radSenzora = radSenzora;
+
     }
 }

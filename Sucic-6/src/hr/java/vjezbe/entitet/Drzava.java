@@ -18,6 +18,13 @@ public class Drzava extends BazniEntitet{
 	 * @param povrsina služi za definiranje površine države
 	 */
 	public Drzava(String naziv, BigDecimal povrsina) {
+		super();
+		this.naziv = naziv;
+		this.povrsina = povrsina;
+		listaZupanije = new ArrayList<Zupanija>();
+	}
+	public Drzava(String naziv, BigDecimal povrsina, Integer id){
+		super(id);
 		this.naziv = naziv;
 		this.povrsina = povrsina;
 		listaZupanije = new ArrayList<Zupanija>();

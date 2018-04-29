@@ -18,6 +18,10 @@ public class SenzorVjetra extends Senzor {
         super(mjernaJedinica, preciznost, radSenzora);
         this.velicinaSenzora = velicinaSenzora;
     }
+    public SenzorVjetra(String mjernaJedinica, BigDecimal preciznost, String velicinaSenzora, RadSenzora radSenzora, Integer id) {
+        super(mjernaJedinica, preciznost, radSenzora, id);
+        this.velicinaSenzora = velicinaSenzora;
+    }
 
     /**
      * vraća string s tekstom veličinom senzora, njenom vrijednošću s mjernom jedinicom

@@ -25,7 +25,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         primaryStage = stage;
-        try { root = (BorderPane) FXMLLoader.load(getClass().getClassLoader().getResource("D:\\Lokalno programiranje - Java\\JavaProgramiranjeVjezbe\\Sucic-7\\src\\hr\\java\\vjezbe\\javafx\\PocetniEkran.fxml"));
+        try { root = (BorderPane) FXMLLoader.load(getClass().getClassLoader().getResource("/PocetniEkran.fxml"));
             Scene scene = new Scene(root,600,400);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
@@ -52,7 +52,7 @@ public class Main extends Application {
         }
         return listaStringova;
     }
-    private static List<Drzava> dohvatiDrzave(){
+    public static List<Drzava> dohvatiDrzave(){
         List<Drzava> lista = new ArrayList<>();
         Drzava drzava = null;
         int id = 0;
@@ -74,7 +74,7 @@ public class Main extends Application {
         return lista;
     }
 
-    private static List<Zupanija> dohvatiZupanije(){
+    public static List<Zupanija> dohvatiZupanije(){
         List<Zupanija> lista = new ArrayList<>();
         List<Drzava> listaDrzava = dohvatiDrzave();
         List<String> procitajDatoteku = procitajDatoteku("zupanije.txt");
@@ -120,7 +120,7 @@ public class Main extends Application {
         return lista;
     }
 
-    private static SenzorVlage dohvatiSenzoreVlage(){
+    public static SenzorVlage dohvatiSenzoreVlage(){
 //        List<SenzorVlage> lista = new ArrayList<>();
         List<String> procitajDatoteku = procitajDatoteku("senzoriVlage.txt");
         SenzorVlage senzor = null;
@@ -136,7 +136,7 @@ public class Main extends Application {
         }
         return senzor;
     }
-    private static SenzorTemperature dohvatiSenzoreTemperature(){
+    public static SenzorTemperature dohvatiSenzoreTemperature(){
 //        List<SenzorTemperature> lista = new ArrayList<>();
         List<String> procitajDatoteku = procitajDatoteku("senzoriTemperature.txt");
         SenzorTemperature senzor = null;
@@ -154,7 +154,7 @@ public class Main extends Application {
         return senzor;
     }
 
-    private static SenzorVjetra dohvatiSenzoreVjetra(){
+    public static SenzorVjetra dohvatiSenzoreVjetra(){
 //        List<SenzorVjetra> lista = new ArrayList<>();
         List<String> procitajDatoteku = procitajDatoteku("senzoriVjetra.txt");
         SenzorVjetra senzor = null;
@@ -171,11 +171,11 @@ public class Main extends Application {
         }
         return senzor;
     }
-    private static List<Senzor> dohvatiSenzore(){
+    public static List<Senzor> dohvatiSenzore(){
         return Arrays.asList(dohvatiSenzoreTemperature(), dohvatiSenzoreVjetra(), dohvatiSenzoreVlage());
     }
 
-    private static List<MjernaPostaja> dohvatiPostaje(){
+    public static List<MjernaPostaja> dohvatiPostaje(){
         List<MjernaPostaja> lista = new ArrayList<>();
         List<Mjesto> listaMjesta = dohvatiMjesta();
         List<String> procitajDatoteku = procitajDatoteku("mjernePostaje.txt");

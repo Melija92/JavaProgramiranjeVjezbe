@@ -1,8 +1,9 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class MjernePostaje<T extends MjernaPostaja> {
+public class MjernePostaje<T extends MjernaPostaja>  implements Serializable {
     private List<T> listaMjernihPostaja;
 
     public MjernePostaje() {

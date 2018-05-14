@@ -1,11 +1,12 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * predstavlja entitet grafičke točke s koordinatima x i y
  */
-public class GeografskaTocka extends BazniEntitet {
+public class GeografskaTocka extends BazniEntitet implements Serializable {
 	private BigDecimal x;
 	
 	private BigDecimal y;

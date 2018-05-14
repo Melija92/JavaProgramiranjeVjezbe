@@ -3,6 +3,7 @@ package hr.java.vjezbe.entitet;
 import hr.java.vjezbe.iznimke.NiskaTemperaturaException;
 import hr.java.vjezbe.iznimke.VisokaTemperaturaException;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.SQLOutput;
 import java.util.Random;
@@ -10,7 +11,7 @@ import java.util.Random;
 /**
  * predstavlja entitet senzora temperature
  */
-public class SenzorTemperature extends Senzor {
+public class SenzorTemperature extends Senzor  implements Serializable {
     private String elektronickaKomponenta;
 
     /**

@@ -1,12 +1,13 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * predstavlja entitet županije
  */
-public class Zupanija extends BazniEntitet{
+public class Zupanija extends BazniEntitet  implements Serializable {
 	private String naziv;
 	private Drzava drzava;
 	private List<Mjesto> listaMjesta;

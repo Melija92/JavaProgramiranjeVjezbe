@@ -1,11 +1,12 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * predstavlja entitet senzora vlage
  */
-public class SenzorVlage extends Senzor {
+public class SenzorVlage extends Senzor  implements Serializable {
     /**
      * prima parametre mjerne jedinice i njene preciznosti
      * @param mjernaJedinica

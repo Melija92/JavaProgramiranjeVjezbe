@@ -2,8 +2,7 @@ package hr.java.vjezbe.glavna;
 
 import hr.java.vjezbe.entitet.*;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.util.*;
@@ -11,6 +10,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static hr.java.vjezbe.glavna.Glavna.ispisiPodatkeSvihMjernihPostaja;
+import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiSenzoreKojiPostojeUJednomMjestu;
+import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisiZupanijeBezDuplikataAbecedno;
+import static hr.java.vjezbe.ispisivanje.HelperIspisivanje.ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde;
 
 public class GlavnaDatoteke {
 
@@ -19,9 +21,74 @@ public class GlavnaDatoteke {
         for (MjernaPostaja mj: dohvatiPostaje()) {
             listaMjernihPostaja.add(mj);
         }
-        ispisiPodatkeSvihMjernihPostaja(listaMjernihPostaja);
+//        ispisiPodatkeSvihMjernihPostaja(listaMjernihPostaja);
+//        ispisiZupanijeBezDuplikataAbecedno(listaMjernihPostaja);
+//        ispisiSenzoreKojiPostojeUJednomMjestu(listaMjernihPostaja);
+//		ispisujtrajnoRadnomTemperatureSenzoraSvakeSekunde(listaMjernihPostaja);
+
+        //PRVI ZADATAK
+        serijaliziaj(listaMjernihPostaja);
+        deserijaliziraj();
+
+        //DRUGI ZADATAK
+        String mjestoSNaduljimNazivom = listaMjernihPostaja.getSortedList()
+                            .stream()
+                            .max(Comparator.comparing(a -> a.getMjesto().getNaziv()))
+                            .get().getNaziv();
+        Integer mjestoSNaduljimNazivomBrojZnakova = listaMjernihPostaja.getSortedList()
+                .stream()
+                .max(Comparator.comparing(a -> a.getMjesto().getNaziv()))
+                .get().getNaziv().length();
+
+        String mjestoSNajkracimNazivom = listaMjernihPostaja.getSortedList()
+                            .stream()
+                            .min(Comparator.comparing(a -> a.getMjesto().getNaziv()))
+                            .get().getNaziv();
+        Integer mjestoSNajkracimNazivomBrojZnakova = listaMjernihPostaja.getSortedList()
+                .stream()
+                .min(Comparator.comparing(a -> a.getMjesto().getNaziv()))
+                .get().getNaziv().length();
+
+        try (PrintWriter out = new PrintWriter(
+                new FileWriter(new File("dat/ispisivanjeMjestaDuzinaINaziva")))) {
+                    out.println(mjestoSNaduljimNazivom + " broj znakova najduze - " + mjestoSNaduljimNazivomBrojZnakova);
+                    out.println(mjestoSNajkracimNazivom + " broj znakova najkrace - " + mjestoSNajkracimNazivomBrojZnakova);
+        } catch(IOException ex){
+            System.err.println(ex);
+        }
+
+        List<String> listaZaIspis = procitajDatoteku("ispisivanjeMjestaDuzinaINaziva.txt");
+        listaZaIspis.forEach(a -> System.out.println(a));
+
 
     }
+
+    private static void deserijaliziraj(){
+        List<Mjesto> mjesta = null;
+        try(ObjectInputStream in = new ObjectInputStream(new FileInputStream("dat/serijaliziranaMjesta.txt"))){
+                mjesta = (ArrayList<Mjesto>)in.readObject();
+        } catch (IOException ex){
+            System.err.println(ex);
+        } catch(ClassNotFoundException ex){
+            System.err.println(ex);
+        }
+
+        mjesta.forEach(a -> System.out.println(a.getNaziv()));
+    }
+    private static void serijaliziaj(MjernePostaje<MjernaPostaja> listaMjernihPostaja){
+        List<Mjesto> mjestaNaSvjernojPolutci = listaMjernihPostaja.getSortedList().stream()
+                .filter(a -> a.getGeografskaTocka().getY().compareTo(new BigDecimal(90)) > 0)
+                .map(p -> p.getMjesto())
+                .collect(Collectors.toList());
+
+        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("dat/serijaliziranaMjesta.txt"))){
+            out.writeObject(mjestaNaSvjernojPolutci);
+        }catch(IOException ex){
+            System.err.println();
+        }
+    }
+
+
     private static List<String> procitajDatoteku(String nazivFajla){
         List<String> listaStringova = null;
         try(Stream<String> stream = Files.lines(new File("dat/" + nazivFajla).toPath())){
@@ -170,7 +237,7 @@ public class GlavnaDatoteke {
                     .findFirst();
 
             MjernaPostaja mjernaPostaja = new MjernaPostaja(naziv, mjesto.get(),
-                    new GeografskaTocka(new BigDecimal(20), new BigDecimal(15)), dohvatiSenzore(), id );
+                    new GeografskaTocka(new BigDecimal(100), new BigDecimal(152)), dohvatiSenzore(), id );
             mjesto.get().getListaMjernihPostaja().add(mjernaPostaja);
 
             lista.add(mjernaPostaja);

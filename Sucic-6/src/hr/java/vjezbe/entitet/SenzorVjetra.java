@@ -1,11 +1,12 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * predstavlja entitet senzora vjetra
  */
-public class SenzorVjetra extends Senzor {
+public class SenzorVjetra extends Senzor  implements Serializable {
     private String velicinaSenzora;
 
     /**

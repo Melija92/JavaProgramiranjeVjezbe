@@ -1,5 +1,6 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 /**
  * predstavlja entitet države s atributima naziva i povrsine
  */
-public class Drzava extends BazniEntitet{
+public class Drzava extends BazniEntitet implements Serializable {
 	private String naziv;
 	private BigDecimal povrsina;
 	private List<Zupanija> listaZupanije;

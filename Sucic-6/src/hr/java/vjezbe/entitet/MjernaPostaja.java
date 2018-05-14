@@ -1,5 +1,6 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -7,7 +8,7 @@ import java.util.Optional;
 /**
  * predstavlja entitet mjernepostaje s atributima nazivom, referencom na mjesto, graficku tocku te polje senzora
  */
-public class MjernaPostaja extends BazniEntitet{
+public class MjernaPostaja extends BazniEntitet implements Serializable {
 	private String naziv;
 	
 	private Mjesto mjesto;

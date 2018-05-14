@@ -1,37 +1,57 @@
-package hr.java.vjezbe.glavna;
+package hr.java.vjezbe.javafx;
 
-import hr.java.vjezbe.entitet.*;
+import hr.java.vjezbe.entitet.SenzorTemperature;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Files;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import hr.java.vjezbe.entitet.*;
 
-import static hr.java.vjezbe.glavna.Glavna.ispisiPodatkeSvihMjernihPostaja;
-
-public class GlavnaDatoteke {
+public class Main extends Application {
+    private static BorderPane root;
+    private Stage primaryStage;
+    @Override
+    public void start(Stage stage) {
+        primaryStage = stage;
+        try { root = (BorderPane) FXMLLoader.load(getClass().getClassLoader().getResource("D:\\Lokalno programiranje - Java\\JavaProgramiranjeVjezbe\\Sucic-7\\src\\hr\\java\\vjezbe\\javafx\\PocetniEkran.fxml"));
+            Scene scene = new Scene(root,600,400);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void setCenterPane(BorderPane centerPane) {
+        root.setCenter(centerPane);
+    }
 
     public static void main(String[] args) {
-        MjernePostaje<MjernaPostaja> listaMjernihPostaja = new MjernePostaje<>();
-        for (MjernaPostaja mj: dohvatiPostaje()) {
-            listaMjernihPostaja.add(mj);
-        }
-        ispisiPodatkeSvihMjernihPostaja(listaMjernihPostaja);
-
+        launch(args);
     }
+
     private static List<String> procitajDatoteku(String nazivFajla){
         List<String> listaStringova = null;
         try(Stream<String> stream = Files.lines(new File("dat/" + nazivFajla).toPath())){
             listaStringova = stream.collect(Collectors.toList());
-    }
-    catch (IOException e) {
-        e.printStackTrace();
-    }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
         return listaStringova;
-}
+    }
     private static List<Drzava> dohvatiDrzave(){
         List<Drzava> lista = new ArrayList<>();
         Drzava drzava = null;
@@ -76,7 +96,7 @@ public class GlavnaDatoteke {
         return lista;
     }
 
-    private static List<Mjesto> dohvatiMjesta(){
+    public static List<Mjesto> dohvatiMjesta(){
         List<Mjesto> lista = new ArrayList<>();
         List<Zupanija> listaZupanija = dohvatiZupanije();
         List<String> procitajDatoteku = procitajDatoteku("mjesta.txt");
@@ -133,7 +153,7 @@ public class GlavnaDatoteke {
         }
         return senzor;
     }
-    
+
     private static SenzorVjetra dohvatiSenzoreVjetra(){
 //        List<SenzorVjetra> lista = new ArrayList<>();
         List<String> procitajDatoteku = procitajDatoteku("senzoriVjetra.txt");
@@ -179,4 +199,3 @@ public class GlavnaDatoteke {
         return lista;
     }
 }
-

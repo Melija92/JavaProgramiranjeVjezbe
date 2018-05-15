@@ -82,7 +82,7 @@ public class PocetniEkranController {
     @FXML
     public void prikaziEkranMjesta() {
         try {
-            BorderPane mjestoPane = FXMLLoader.load(getClass().getClassLoader().getResource("src/hr/java/vjezbe/javafx/PocetniEkran.fxml"));
+            BorderPane mjestoPane = FXMLLoader.load(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/PocetniEkran.fxml"));
             Main.setCenterPane(mjestoPane);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -92,7 +92,7 @@ public class PocetniEkranController {
     @FXML
     public void prikaziEkranDrzave() {
         try {
-            BorderPane drzavePane = FXMLLoader.load(getClass().getClassLoader().getResource("src/hr/java/vjezbe/javafx/Drzave.fxml"));
+            BorderPane drzavePane = FXMLLoader.load(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/Drzave.fxml"));
             Main.setCenterPane(drzavePane);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -102,7 +102,7 @@ public class PocetniEkranController {
     @FXML
     public void prikaziEkranZupanije() {
         try {
-            BorderPane zupanijaPane = FXMLLoader.load(getClass().getClassLoader().getResource("src/hr/java/vjezbe/javafx/Zupanije.fxml"));
+            BorderPane zupanijaPane = FXMLLoader.load(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/Zupanije.fxml"));
             Main.setCenterPane(zupanijaPane);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -112,7 +112,7 @@ public class PocetniEkranController {
     @FXML
     public void prikaziEkranPostaje() {
         try {
-            BorderPane postajaPane = FXMLLoader.load(getClass().getClassLoader().getResource("src/hr/java/vjezbe/javafx/MjernePostaje.fxml"));
+            BorderPane postajaPane = FXMLLoader.load(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/MjernePostaje.fxml"));
             Main.setCenterPane(postajaPane);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -122,7 +122,7 @@ public class PocetniEkranController {
     @FXML
     public void prikaziEkranSenzora() {
         try {
-            BorderPane postajaPane = FXMLLoader.load(getClass().getClassLoader().getResource("src/hr/java/vjezbe/javafx/Senzori.fxml"));
+            BorderPane postajaPane = FXMLLoader.load(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/Senzori.fxml"));
             Main.setCenterPane(postajaPane);
         } catch (IOException ex) {
             ex.printStackTrace();

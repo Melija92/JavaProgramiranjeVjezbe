@@ -67,15 +67,15 @@ public class ZupanijeController {
 
     @FXML
     public void prikaziZupanije() {
-        List<Zupanija> filtriranaMjesta = new ArrayList<Zupanija>();
+        List<Zupanija> filtriraneZupanije = new ArrayList<Zupanija>();
         if (zupanijaFilterTextField.getText().isEmpty() == false) {
-            filtriranaMjesta = listaZupanija.stream().filter(m ->
+            filtriraneZupanije = listaZupanija.stream().filter(m ->
                     m.getNaziv().contains(zupanijaFilterTextField.getText()))
                     .collect(Collectors.toList());
         } else {
-            filtriranaMjesta = listaZupanija;
+            filtriraneZupanije = listaZupanija;
         }
-        ObservableList<Zupanija> listaMjesta = FXCollections.observableArrayList(filtriranaMjesta);
+        ObservableList<Zupanija> listaMjesta = FXCollections.observableArrayList(filtriraneZupanije);
         zupanijeTableView.setItems(listaMjesta);
     }
 

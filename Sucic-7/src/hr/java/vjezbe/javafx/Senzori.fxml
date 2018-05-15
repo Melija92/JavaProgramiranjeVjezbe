@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.javafx.PocetniEkranController">
+<BorderPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.javafx.SenzoriController">
     <center>
         <AnchorPane>
             <children>
@@ -53,9 +53,9 @@
                     <center>
                         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label alignment="CENTER" text="Pretraga mjesta" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS">
+                                <Label alignment="CENTER" text="Pretraga senzora" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS">
                                     <VBox.margin>
-                                        <Insets bottom="10.0" left="200.0" right="10.0" top="50.0" />
+                                        <Insets bottom="2.0" left="200.0" right="10.0" top="50.0" />
                                     </VBox.margin>
                                     <padding>
                                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -64,23 +64,24 @@
                                     <children>
                                         <Label text="Naziv" textAlignment="CENTER">
                                             <FlowPane.margin>
-                                                <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
+                                                <Insets bottom="10.0" left="100.0" right="1.0" top="10.0" />
                                             </FlowPane.margin>
                                             <padding>
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                             </padding></Label>
-                                        <TextField id="mjestaFilterTextField" fx:id="mjestaFilterTextField" />
-                                        <Button fx:id="pretraziButton" mnemonicParsing="false" onAction="#prikaziMjesta" text="Pretraži">
+                                        <TextField id="mjestaFilterTextField" fx:id="postajeFilterTextField" />
+                                        <Button fx:id="pretraziButton" mnemonicParsing="false" onAction="#prikaziSenzore" text="Pretraži">
                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
+                                                <Insets left="1.0" />
                                             </FlowPane.margin></Button>
                                     </children>
                                 </FlowPane>
-                                <TableView fx:id="mjestaTableView" prefHeight="323.0" prefWidth="690.0">
+                                <TableView fx:id="senzorTableView" prefHeight="323.0" prefWidth="690.0">
                                     <columns>
-                                        <TableColumn fx:id="nazivColumn" prefWidth="75.0" text="Naziv" />
-                                        <TableColumn id="tipColumn" fx:id="tipColumn" prefWidth="75.0" text="Tip" />
-                                        <TableColumn id="zupanijaColumn" fx:id="zupanijaColumn" prefWidth="75.0" text="Županija" />
+                                        <TableColumn id="tipColumn" fx:id="jedinicaColumn" prefWidth="75.0" text="Jedinica" />
+                                        <TableColumn id="tipColumn" fx:id="odstupanjeColumn" prefWidth="132.0" text="Preciznost" />
+                                        <TableColumn id="tipColumn" fx:id="vrijednostColumn" prefWidth="132.0" text="Vrijednost" />
+                                        <TableColumn id="tipColumn" fx:id="nacinRadaColumn" prefWidth="132.0" text="Nacin rada" />
                                     </columns>
                                 </TableView>
                             </children>

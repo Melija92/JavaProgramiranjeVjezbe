@@ -25,7 +25,9 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         primaryStage = stage;
-        try { root = (BorderPane) FXMLLoader.load(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/PocetniEkran.fxml"));
+        try {
+
+            root = (BorderPane)FXMLLoader.load(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/PocetniEkran.fxml"));
             Scene scene = new Scene(root,600,400);
             scene.getStylesheets().add(getClass().getClassLoader().getResource("./src/hr/java/vjezbe/javafx/application.css").toExternalForm());
             primaryStage.setScene(scene);

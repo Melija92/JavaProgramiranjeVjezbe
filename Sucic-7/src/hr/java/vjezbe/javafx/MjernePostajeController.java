@@ -56,7 +56,8 @@ public class MjernePostajeController {
             @Override
             public ObservableValue<String> call( TableColumn.CellDataFeatures<MjernaPostaja, String> param) {
                 return new ReadOnlyObjectWrapper<String>
-                        (param.getValue().getGeografskaTocka().toString());
+                        (param.getValue().getGeografskaTocka().getX().toString() + "-"
+                                + param.getValue().getGeografskaTocka().getY().toString());
             }});
     }
 

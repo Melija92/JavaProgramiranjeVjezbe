@@ -1,0 +1,21 @@
+1
+Karlovacka
+1
+2
+Zagrebacka
+1
+3
+Zadarska
+1
+4
+Nova Gora zup
+2
+5
+Dolenjska
+2
+6
+Strajerska
+2
+7
+Argeno-buenos-zupanija
+3

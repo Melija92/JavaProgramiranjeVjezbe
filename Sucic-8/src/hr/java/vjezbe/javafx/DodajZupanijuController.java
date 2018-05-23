@@ -56,7 +56,7 @@ public class DodajZupanijuController {
 
         String naziv = nazivTextField.getText();
         Drzava drzava = drzavaComboBox.getValue();
-        File zupanijeFile = new File("resources/zupanije.txt");
+        File zupanijeFile = new File("dat/zupanije.txt");
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(naziv)) {

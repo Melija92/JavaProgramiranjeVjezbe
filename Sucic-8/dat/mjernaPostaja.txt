@@ -1,7 +1,7 @@
 1
 Mjerna postaja Zagreb
 Banova graba
-45.45
+90
 52.52
 NULL
 NULL
@@ -15,7 +15,7 @@ NULL
 3
 Mjerna postaja Skopje
 Makedonska dolina
-15.45
+90
 50.00
 NULL
 150
@@ -23,13 +23,13 @@ NULL
 Mjerna postaja Sarajevo
 Sarajevo
 25.20
-50.15
+50
 NULL
 150
 5
 Mjerna postaja Berlin
 Berlin
-50.50
+90
 65.65
 NULL
 NULL
@@ -37,27 +37,13 @@ NULL
 Mjerna postaja Trnava
 Trnava
 25.15
-58.15
+50
 NULL
 NULL
 7
 Mjerna postaja Pečuh
 Pečuh
 88.15
-15.00
+50
 NULL
 250
-7
-Mjerna postaja Berat
-Berat
-15.45
-50.00
-NULL
-NULL
-11
-Marko postaja
-Banova graba
-15.50
-25.58
-NULL
-NULL

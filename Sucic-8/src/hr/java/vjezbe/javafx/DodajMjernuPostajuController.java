@@ -59,7 +59,7 @@ public class DodajMjernuPostajuController {
         String tockaX = tockaXTextField.getText();
         String tockaY = tockaYTextField.getText();
         Mjesto mjesto = mjestoComboBox.getValue();
-        File mjestaFile = new File("resources/mjernaPostaja.txt");
+        File mjestaFile = new File("dat/mjernaPostaja.txt");
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(naziv)) {

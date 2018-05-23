@@ -45,7 +45,7 @@ public class DodajDrzavuController {
 
         String naziv = nazivTextField.getText();
         BigDecimal povrsina = new BigDecimal(povrsinaTextField.getText());
-        File drzaveFile = new File("resources/drzave.txt");
+        File drzaveFile = new File("dat/drzave.txt");
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(naziv)) {

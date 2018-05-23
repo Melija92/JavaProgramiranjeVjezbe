@@ -60,7 +60,7 @@ public class DodajMjestoController {
         String naziv = nazivTextField.getText();
         Zupanija zupanija = zupanijaComboBox.getValue();
         VrstaMjesta vrstaMjesta = vrstaMjestaComboBox.getValue();
-        File mjestaFile = new File("resources/mjesto.txt");
+        File mjestaFile = new File("dat/mjesto.txt");
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(naziv)) {

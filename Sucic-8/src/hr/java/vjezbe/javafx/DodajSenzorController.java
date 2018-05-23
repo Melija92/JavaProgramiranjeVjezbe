@@ -56,7 +56,7 @@ public class DodajSenzorController {
         String preciznost = preciznostTextField.getText();
         String vrijednost = vrijednostTextField.getText();
         RadSenzora radSenzora = radComboBox.getValue();
-        File mjestaFile = new File("resources/senzori.txt");
+        File mjestaFile = new File("dat/senzori.txt");
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(jedinica)) {

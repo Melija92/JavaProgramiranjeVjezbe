@@ -36,12 +36,12 @@ public class Main extends Application {
         launch(args);
     }
 
-    private static final String fileDrzave = "resources/drzave.txt";
-    private static final String fileZupanije = "resources/zupanije.txt";
-    private static final String fileMjesta = "resources/mjesto.txt";
-    private static final String fileTocke = "resources/geografskaTocka.txt";
-    private static final String fileSenzori = "resources/senzori.txt";
-    private static final String filePostaje = "resources/mjernaPostaja.txt";
+    private static final String fileDrzave = "dat/drzave.txt";
+    private static final String fileZupanije = "dat/zupanije.txt";
+    private static final String fileMjesta = "dat/mjesto.txt";
+    private static final String fileTocke = "dat/geografskaTocka.txt";
+    private static final String fileSenzori = "dat/senzori.txt";
+    private static final String filePostaje = "dat/mjernaPostaja.txt";
 
     private static Map<Integer, Drzava> drzavaDatoteka = new HashMap<>();
     private static Map<Integer, Zupanija> zupanijaDatoteka = new HashMap<>();

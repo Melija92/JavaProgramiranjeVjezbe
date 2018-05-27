@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd581f5c-f816-4401-861f-3a97eb21a5a5" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1105" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Sucic-8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sucic-8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-8" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sucic-8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sucic-8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sucic-8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sucic-8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="vjezbe" type="462c0819:PsiDirectoryNode" />
+              <item name="entitet" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd581f5c-f816-4401-861f-3a97eb21a5a5" name="Default" comment="" />
+      <created>1527088345391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527088345391</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32413793" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32965517" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/Main.java" />
+    <entry file="file://$PROJECT_DIR$/resources/mjesto.txt" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/DodajMjestoController.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavnaDatoteke/UnosPodataka.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Mjesto.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/PocetniEkranController.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/PocetniEkranController.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavnaDatoteke/UnosPodataka.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Mjesto.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/DodajMjestoController.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Senzor.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/GeografskaTocka.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/RadioSondaznaMjernaPostaja.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorVlage.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Zupanija.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/RadioSondazna.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorGlobalnogZracenja.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/SenzorTemperature.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Drzava.java" />
+    <entry file="file://$PROJECT_DIR$/resources/drzave.txt" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/DodajSenzorController.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/DodajZupanijuController.java" />
+    <entry file="file://$PROJECT_DIR$/resources/senzori.txt" />
+    <entry file="file://$PROJECT_DIR$/resources/mjernaPostaja.txt" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/entitet/Mjesto.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="269" column="6" selection-start-line="269" selection-start-column="6" selection-end-line="269" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/DodajDrzavuController.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/glavnaDatoteke/UnosPodataka.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/DrzaveController.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/TableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="861" column="22" selection-start-line="861" selection-start-column="22" selection-end-line="861" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="1783" selection-start-line="1783" selection-end-line="1783" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/DodajMjestoController.java" />
+    <entry file="file://$PROJECT_DIR$/resources/mjesto.txt" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/PocetniEkranController.java" />
+    <entry file="file://$PROJECT_DIR$/src/hr/java/vjezbe/javafx/Main.java" />
+  </component>
+</project>

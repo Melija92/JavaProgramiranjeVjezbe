@@ -5,9 +5,6 @@ import java.util.List;
 
 /**
  * Predstavlja entitet županija opisan atributima naziv i država
- *
- * @author Marko
- * @version 1.0
  */
 public class Zupanija extends BazniEntitet{
 

@@ -5,9 +5,6 @@ import java.util.List;
 /**
  * Predstavlja entitet radiosondažna mjerna postaja, opisan atributima nadklase
  * i atributom visina
- *
- * @author Marko
- * @version 1.0
  */
 public class RadioSondaznaMjernaPostaja extends MjernaPostaja implements RadioSondazna{
 

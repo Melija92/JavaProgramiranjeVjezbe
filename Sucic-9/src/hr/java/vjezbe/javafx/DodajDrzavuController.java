@@ -22,9 +22,6 @@ import java.util.List;
 
 public class DodajDrzavuController {
 
-    private List<Mjesto> listaMjesta = Main.dohvatiMjesta();
-    private List<Drzava> listaDrzava = Main.dohvatiDrzave();
-
     @FXML
     private TextField nazivTextField;
     @FXML
@@ -34,22 +31,35 @@ public class DodajDrzavuController {
 
 
     public int getZadnjiId() {
-        return listaDrzava.size();
+        return dohvatiDrzave().size();
     }
 
+    private List<Drzava> dohvatiDrzave(){
+        List<Drzava> listaDrzava = null;
+        try{
+            listaDrzava = BazaPodataka.dohvatiDrzave();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        return listaDrzava;
+    }
 
     public void dodajDrzavu(){
         Boolean ispravniPodaci = true;
         String porukaKorisniku = "";
 
         String naziv = nazivTextField.getText();
-        BigDecimal povrsina = new BigDecimal(povrsinaTextField.getText());
-//        File drzaveFile = new File("resources/drzave.txt");
+        String povrsina = povrsinaTextField.getText();
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(naziv)) {
             ispravniPodaci = false;
-            porukaKorisniku += "Niste unijeli naziv drzave!";
+            porukaKorisniku += "Niste unijeli naziv drzave!\n";
         }
 
         if(isStringEmpty(povrsina.toString())) {
@@ -70,7 +80,7 @@ public class DodajDrzavuController {
             alert.showAndWait();
             Stage stage = (Stage) spremiButton.getScene().getWindow();
             stage.close();
-            Drzava drzava = new Drzava(noviId, naziv, povrsina);
+            Drzava drzava = new Drzava(noviId, naziv, new BigDecimal(povrsina));
 
             try{
                 BazaPodataka.spremiDrzavu(drzava);

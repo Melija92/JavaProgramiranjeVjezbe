@@ -1,5 +1,6 @@
 package hr.java.vjezbe.entitet;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,20 @@ public class MjernaPostaja extends BazniEntitet {
 		this.geografskaTocka = geografskaTocka;
 		this.senzori = senzori;
 	}
+
+    public MjernaPostaja(String naziv, Mjesto mjesto, GeografskaTocka geografskaTocka) {
+        super();
+        this.naziv = naziv;
+        this.mjesto = mjesto;
+        this.geografskaTocka = geografskaTocka;
+    }
+
+    public MjernaPostaja(Integer id, String naziv, Mjesto mjesto, GeografskaTocka geografskaTocka) {
+        super(id);
+        this.naziv = naziv;
+        this.mjesto = mjesto;
+        this.geografskaTocka = geografskaTocka;
+    }
 
 	public MjernaPostaja(Integer id) {
 		super(id);
@@ -96,4 +111,7 @@ public class MjernaPostaja extends BazniEntitet {
 	Optional<Senzor> senzor = senzori.stream().filter(p -> p.getId() == id).findFirst();
 	return  senzor;
 	}
+
+	@Override
+    public String toString(){return getNaziv();}
 }

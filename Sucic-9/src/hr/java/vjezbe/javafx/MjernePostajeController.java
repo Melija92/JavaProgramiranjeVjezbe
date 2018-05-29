@@ -1,5 +1,6 @@
 package hr.java.vjezbe.javafx;
 
+import hr.java.vjezbe.baza.podataka.BazaPodataka;
 import hr.java.vjezbe.entitet.MjernaPostaja;
 import hr.java.vjezbe.entitet.Mjesto;
 import hr.java.vjezbe.entitet.Zupanija;
@@ -17,6 +18,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -60,13 +62,21 @@ public class MjernePostajeController {
             @Override
             public ObservableValue<String> call( TableColumn.CellDataFeatures<MjernaPostaja, String> param) {
                 return new ReadOnlyObjectWrapper<String>
-                        (param.getValue().getGeografskaTocka().getX().toString() + " " + param.getValue().getGeografskaTocka().getY().toString());
+                        (param.getValue().getGeografskaTocka().getX().toString() + " - " + param.getValue().getGeografskaTocka().getY().toString());
             }});
     }
 
     @FXML
     public void prikaziPostaje() {
-        listaPostaja = Main.dohvatiPostaje();
+        try{
+            listaPostaja = BazaPodataka.dohvatiMjernePostaje();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
         List<MjernaPostaja> filtriranePostaje = new ArrayList<MjernaPostaja>();
         if (postajeFilterTextField.getText().isEmpty() == false) {
             filtriranePostaje = listaPostaja.stream().filter(m ->

@@ -6,8 +6,6 @@ import java.util.List;
 
 /**
  *  Predstavlja entitet država opisan atributima naziv i površina
- *  @author Marko
- *  @version 1.0
  */
 public class Drzava extends BazniEntitet{
 	

@@ -1,5 +1,6 @@
 package hr.java.vjezbe.javafx;
 
+import hr.java.vjezbe.baza.podataka.BazaPodataka;
 import hr.java.vjezbe.entitet.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,12 +12,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.util.List;
 
 public class DodajSenzorController {
-
-    private List<Mjesto> listaMjesta = Main.dohvatiMjesta();
-    private List<Senzor> listaSenzora = Main.dohvatiSenzore();
 
     @FXML
     private TextField jedinicaTextField;
@@ -27,21 +26,61 @@ public class DodajSenzorController {
     @FXML
     private ComboBox<RadSenzora> radComboBox;
     @FXML
+    private TextField komponentaTextField;
+    @FXML
+    private ComboBox<MjernaPostaja> mjernaPostajaComboBox;
+    @FXML
     private Button spremiButton;
 
 
     public void initialize(){
         radComboBox.setValue(RadSenzora.PING);
+        mjernaPostajaComboBox.setValue(dohvatiMjernePostaje().get(0));
     }
 
     public int getZadnjiId() {
-        return listaSenzora.size();
+        return dohvatiSenzoreTemperature().size();
+    }
+
+    private List<SenzorTemperature> dohvatiSenzoreTemperature(){
+        List<SenzorTemperature> lista = null;
+        try{
+            lista = BazaPodataka.dohvatiSenzore();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        return lista;
+    }
+    private List<MjernaPostaja> dohvatiMjernePostaje(){
+        List<MjernaPostaja> lista = null;
+        try{
+            lista = BazaPodataka.dohvatiMjernePostaje();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        return lista;
     }
 
     @FXML
     public void prikaziRadComboBox() {
         ObservableList<RadSenzora> vrstaRadaSenzora = FXCollections.observableArrayList(RadSenzora.values());
         radComboBox.setItems(vrstaRadaSenzora);
+    }
+
+    @FXML
+    public void prikaziMjernePostajeComboBox() {
+        ObservableList<MjernaPostaja> mjernePostaje = FXCollections.observableArrayList(dohvatiMjernePostaje());
+        mjernaPostajaComboBox.setItems(mjernePostaje);
     }
 
     public void dodajSenzor(){
@@ -52,7 +91,8 @@ public class DodajSenzorController {
         String preciznost = preciznostTextField.getText();
         String vrijednost = vrijednostTextField.getText();
         RadSenzora radSenzora = radComboBox.getValue();
-        File mjestaFile = new File("resources/senzori.txt");
+        String elektronickaKomponenta = komponentaTextField.getText();
+        MjernaPostaja mjernaPostaja = mjernaPostajaComboBox.getValue();
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(jedinica)) {
@@ -72,7 +112,7 @@ public class DodajSenzorController {
 
         if(isDigitsOnly(preciznost)){
             ispravniPodaci = false;
-            porukaKorisniku += "Smiju se unijeti samo brojčane vrijednosti za preciznost!";
+            porukaKorisniku += "Smiju se unijeti samo brojčane vrijednosti za preciznost!\n";
         }
 
         if(isDigitsOnly(vrijednost)){
@@ -81,24 +121,23 @@ public class DodajSenzorController {
         }
 
         if(ispravniPodaci){
-            try (FileWriter writer = new FileWriter(mjestaFile, true)) {
-                writer.write("\n" + noviId + "\n");
-                writer.write("NULL" + "\n");
-                writer.write(jedinica + "\n");
-                writer.write(preciznost + "\n");
-                writer.write(vrijednost + "\n");
-                writer.write(radSenzora.toString());
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Uspješno spremanje senzora!");
-                alert.setHeaderText("Uspješno spremanje senzora!");
-                alert.setContentText("Uneseni podaci za senzor su uspješno spremljeni.");
-                alert.showAndWait();
-                Stage stage = (Stage) spremiButton.getScene().getWindow();
-                stage.close();
-                Senzor senzor = new SenzorVlage(jedinica, Double.parseDouble(preciznost));
-                senzor.setVrijednost(new BigDecimal(vrijednost));
-                SenzoriController.dodajNoviSenzor(senzor);
-            } catch (IOException e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Uspješno spremanje senzora temperature!");
+            alert.setHeaderText("Uspješno spremanje senzora!");
+            alert.setContentText("Uneseni podaci za senzor su uspješno spremljeni.");
+            alert.showAndWait();
+            Stage stage = (Stage) spremiButton.getScene().getWindow();
+            stage.close();
+            SenzorTemperature senzor = new SenzorTemperature(noviId, elektronickaKomponenta, jedinica,
+                    Double.parseDouble(preciznost), new BigDecimal(vrijednost), radSenzora, mjernaPostaja);
+
+            try{
+                BazaPodataka.spremiSenzor(senzor);
+            }
+            catch(SQLException e){
+                e.printStackTrace();
+            }
+            catch(IOException e){
                 e.printStackTrace();
             }
         } else {
@@ -125,7 +164,7 @@ public class DodajSenzorController {
     private boolean isDigitsOnly(String tekst){
         Boolean isDigit = false;
 
-        if(tekst.matches("\\b\\d+\\b")){
+        if(tekst.matches("[^0-9]+")){
             isDigit = true;
         }
         return isDigit;

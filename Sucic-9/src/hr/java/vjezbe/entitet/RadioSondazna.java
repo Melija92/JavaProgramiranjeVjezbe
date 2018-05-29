@@ -2,9 +2,6 @@ package hr.java.vjezbe.entitet;
 
 /**
  * Predstavlja bazni entitet radiosondažnih mjernih postaja
- *
- * @author Marko
- * @version 1.0
  */
 public interface RadioSondazna {
     /**

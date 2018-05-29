@@ -1,5 +1,7 @@
 package hr.java.vjezbe.javafx;
 
+import hr.java.vjezbe.baza.podataka.BazaPodataka;
+import hr.java.vjezbe.entitet.Drzava;
 import hr.java.vjezbe.entitet.Mjesto;
 import hr.java.vjezbe.entitet.VrstaMjesta;
 import hr.java.vjezbe.entitet.Zupanija;
@@ -13,11 +15,10 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class DodajMjestoController {
-    private List<Mjesto> listaMjesta = Main.dohvatiMjesta();
-    private List<Zupanija> listaZupanija = Main.dohvatiZupanije();
 
     @FXML
     private TextField nazivTextField;
@@ -29,17 +30,46 @@ public class DodajMjestoController {
     private Button spremiButton;
 
     public void initialize(){
-        zupanijaComboBox.setValue(listaZupanija.get(0));
+        zupanijaComboBox.setValue(dohvatiZupanije().get(0));
         vrstaMjestaComboBox.setValue(VrstaMjesta.GRAD);
     }
 
     public int getZadnjiId() {
-        return listaMjesta.size();
+        return dohvatiMjesta().size();
+    }
+
+    private List<Mjesto> dohvatiMjesta(){
+        List<Mjesto> lista = null;
+        try{
+            lista = BazaPodataka.dohvatiMjesta();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        return lista;
+    }
+    private List<Zupanija> dohvatiZupanije(){
+        List<Zupanija> lista = null;
+        try{
+            lista = BazaPodataka.dohvatiZupanije();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        return lista;
     }
 
     @FXML
     public void prikaziZupanijeComboBox() {
-        ObservableList<Zupanija> listaZupanijaCombo = FXCollections.observableArrayList(listaZupanija);
+        ObservableList<Zupanija> listaZupanijaCombo = FXCollections.observableArrayList(dohvatiZupanije());
         zupanijaComboBox.setItems(listaZupanijaCombo);
     }
 
@@ -56,7 +86,6 @@ public class DodajMjestoController {
         String naziv = nazivTextField.getText();
         Zupanija zupanija = zupanijaComboBox.getValue();
         VrstaMjesta vrstaMjesta = vrstaMjestaComboBox.getValue();
-        File mjestaFile = new File("resources/mjesto.txt");
         int noviId = getZadnjiId() + 1;
 
         if(isStringEmpty(naziv)) {
@@ -65,22 +94,23 @@ public class DodajMjestoController {
         }
 
         if(ispravniPodaci){
-            try (FileWriter writer = new FileWriter(mjestaFile, true)) {
-                writer.write("\n" + noviId + "\n");
-                writer.write(naziv + "\n");
-                writer.write(zupanija.getNaziv() + "\n");
-                writer.write(vrstaMjesta.toString());
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Uspješno spremanje mjesta!");
-                alert.setHeaderText("Uspješno spremanje mjesta!");
-                alert.setContentText("Uneseni podaci za mjesto su uspješno spremljeni.");
-                alert.showAndWait();
-                Stage stage = (Stage) spremiButton.getScene().getWindow();
-                stage.close();
-                Mjesto mjesto = new Mjesto(noviId, naziv, zupanija);
-                mjesto.setVrstaMjesta(vrstaMjesta);
-                PocetniEkranController.dodajNovoMjesto(mjesto);
-            } catch (IOException e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Uspješno spremanje mjesta!");
+            alert.setHeaderText("Uspješno spremanje mjesta!");
+            alert.setContentText("Uneseni podaci za mjesto su uspješno spremljeni.");
+            alert.showAndWait();
+            Stage stage = (Stage) spremiButton.getScene().getWindow();
+            stage.close();
+            Mjesto mjesto = new Mjesto(noviId, naziv, zupanija);
+            mjesto.setVrstaMjesta(vrstaMjesta);
+
+            try{
+                BazaPodataka.spremiMjesto(mjesto);
+            }
+            catch(SQLException e){
+                e.printStackTrace();
+            }
+            catch(IOException e){
                 e.printStackTrace();
             }
         } else {

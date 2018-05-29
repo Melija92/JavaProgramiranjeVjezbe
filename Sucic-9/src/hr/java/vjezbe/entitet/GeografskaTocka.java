@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 
 /**
  * Predstavlja entitet geografska točka opisan atributima koordinata x i y
- *
- * @author Marko
  * @version 1.0
  */
 public class GeografskaTocka extends BazniEntitet{

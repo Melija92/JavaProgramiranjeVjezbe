@@ -1,6 +1,8 @@
 package hr.java.vjezbe.javafx;
 
+import hr.java.vjezbe.baza.podataka.BazaPodataka;
 import hr.java.vjezbe.entitet.Senzor;
+import hr.java.vjezbe.entitet.SenzorTemperature;
 import hr.java.vjezbe.entitet.Zupanija;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
@@ -18,6 +20,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,22 +28,24 @@ import java.util.stream.Collectors;
 public class SenzoriController {
 
 
-    private static List<Senzor> listaSenzora;
+    private static List<SenzorTemperature> listaSenzora;
 
     @FXML
     private TextField postajeFilterTextField;
     @FXML
-    private TableView<Senzor> senzorTableView;
-    /*@FXML
-    private TableColumn<Senzor, String> sifraColumn;*/
+    private TableView<SenzorTemperature> senzorTableView;
     @FXML
-    private TableColumn<Senzor, String> jedinicaColumn;
+    private TableColumn<SenzorTemperature, String> jedinicaColumn;
     @FXML
-    private TableColumn<Senzor, String> odstupanjeColumn;
+    private TableColumn<SenzorTemperature, String> odstupanjeColumn;
     @FXML
-    private TableColumn<Senzor, String> vrijednostColumn;
+    private TableColumn<SenzorTemperature, String> vrijednostColumn;
     @FXML
-    private TableColumn<Senzor, String> nacinRadaColumn;
+    private TableColumn<SenzorTemperature, String> nacinRadaColumn;
+    @FXML
+    private TableColumn<SenzorTemperature, String> nazivKomonenteColumn;
+    @FXML
+    private TableColumn<SenzorTemperature, String> nazivPostajeColumn;
     @FXML
     private Button pretraziButton;
 
@@ -54,39 +59,60 @@ public class SenzoriController {
                 return new ReadOnlyObjectWrapper<String>
                         (param.getValue());
             }});*/
-        jedinicaColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Senzor, String>, ObservableValue<String>>() {
+        jedinicaColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SenzorTemperature, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call( TableColumn.CellDataFeatures<Senzor, String> param) {
+            public ObservableValue<String> call( TableColumn.CellDataFeatures<SenzorTemperature, String> param) {
                 return new ReadOnlyObjectWrapper<String>
                         (param.getValue().getMjernaJedinica());
             }});
 
-        odstupanjeColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Senzor, String>, ObservableValue<String>>() {
+        odstupanjeColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SenzorTemperature, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call( TableColumn.CellDataFeatures<Senzor, String> param) {
+            public ObservableValue<String> call( TableColumn.CellDataFeatures<SenzorTemperature, String> param) {
                 return new ReadOnlyObjectWrapper<String>
                         (param.getValue().getPreciznost().toString());
             }});
 
-        vrijednostColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Senzor, String>, ObservableValue<String>>() {
+        vrijednostColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SenzorTemperature, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call( TableColumn.CellDataFeatures<Senzor, String> param) {
+            public ObservableValue<String> call( TableColumn.CellDataFeatures<SenzorTemperature, String> param) {
                 return new ReadOnlyObjectWrapper<String>
                         (param.getValue().getVrijednost().toString());
             }});
 
-        nacinRadaColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Senzor, String>, ObservableValue<String>>() {
+        nacinRadaColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SenzorTemperature, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call( TableColumn.CellDataFeatures<Senzor, String> param) {
+            public ObservableValue<String> call( TableColumn.CellDataFeatures<SenzorTemperature, String> param) {
                 return new ReadOnlyObjectWrapper<String>
                         (param.getValue().getRadSenzora().toString());
+            }});
+        nazivPostajeColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SenzorTemperature, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call( TableColumn.CellDataFeatures<SenzorTemperature, String> param) {
+                return new ReadOnlyObjectWrapper<String>
+                        (param.getValue().getMjernaPostaja().getNaziv());
+            }});
+        nazivKomonenteColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SenzorTemperature, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call( TableColumn.CellDataFeatures<SenzorTemperature, String> param) {
+                return new ReadOnlyObjectWrapper<String>
+                        (param.getValue().getElektronickaKomponenta());
             }});
     }
 
     @FXML
     public void prikaziSenzore() {
-        listaSenzora = Main.dohvatiSenzore();
-        List<Senzor> filtriraniSenzori = new ArrayList<Senzor>();
+        try{
+            listaSenzora = BazaPodataka.dohvatiSenzore();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        List<SenzorTemperature> filtriraniSenzori = new ArrayList<SenzorTemperature>();
         if (postajeFilterTextField.getText().isEmpty() == false) {
             filtriraniSenzori = listaSenzora.stream().filter(m ->
                     m.getMjernaJedinica().contains(postajeFilterTextField.getText()))
@@ -94,7 +120,7 @@ public class SenzoriController {
         } else {
             filtriraniSenzori = listaSenzora;
         }
-        ObservableList<Senzor> listaSenzora = FXCollections.observableArrayList(filtriraniSenzori);
+        ObservableList<SenzorTemperature> listaSenzora = FXCollections.observableArrayList(filtriraniSenzori);
         senzorTableView.setItems(listaSenzora);
     }
 
@@ -146,11 +172,6 @@ public class SenzoriController {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-    }
-
-    public static void dodajNoviSenzor(Senzor noviSenzor) {
-        listaSenzora = Main.dohvatiSenzore();
-        listaSenzora.add(noviSenzor);
     }
 
     public void prikaziEkranZaNovoMjesto() {

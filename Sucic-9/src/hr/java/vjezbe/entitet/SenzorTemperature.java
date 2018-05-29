@@ -5,9 +5,6 @@ import java.util.Random;
 
 /**
  * Predstavlja entitet senzora temperature opisanog atributima nadklase i atributom elektronička komponenta
- *
- * @author Marko
- * @version 1.0
  */
 public class SenzorTemperature extends Senzor{
 
@@ -24,9 +21,14 @@ public class SenzorTemperature extends Senzor{
      * @param preciznost podatak koji predstavlja preciznost senzora
      */
 	public SenzorTemperature(String elektronickaKomponenta, String mjernaJedinica, Double preciznost){
-		super(mjernaJedinica,preciznost);
-		this.elektronickaKomponenta = elektronickaKomponenta;
-	}
+        super(mjernaJedinica, preciznost);
+        this.elektronickaKomponenta = elektronickaKomponenta;
+    }
+    public SenzorTemperature(Integer senzorId, String elektronickaKomponenta, String mjernaJedinica, Double preciznost,
+                             BigDecimal vrijednost, RadSenzora radSenzora, MjernaPostaja mjernaPostaja){
+        super(senzorId, mjernaJedinica, preciznost, vrijednost, radSenzora, mjernaPostaja);
+        this.elektronickaKomponenta = elektronickaKomponenta;
+    }
 
     /**
      * Dohvaća elektronsku komponentu senzora

@@ -18,9 +18,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class DodajZupanijuController {
-    private List<Mjesto> listaMjesta = Main.dohvatiMjesta();
-    private List<Drzava> listaDrzava = Main.dohvatiDrzave();
-    private List<Zupanija> listaZupanija = Main.dohvatiZupanije();
 
     @FXML
     private TextField nazivTextField;
@@ -31,17 +28,45 @@ public class DodajZupanijuController {
 
 
     public void initialize(){
-        drzavaComboBox.setValue(listaDrzava.get(0));
+        drzavaComboBox.setValue(dohvatiDrzave().get(0));
     }
 
     public int getZadnjiId() {
-        return listaZupanija.size();
+        return dohvatiZupanije().size();
+    }
+
+    private List<Drzava> dohvatiDrzave(){
+        List<Drzava> listaDrzava = null;
+        try{
+            listaDrzava = BazaPodataka.dohvatiDrzave();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        return listaDrzava;
+    }
+    private List<Zupanija> dohvatiZupanije(){
+        List<Zupanija> lista = null;
+        try{
+            lista = BazaPodataka.dohvatiZupanije();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        return lista;
     }
 
     @FXML
     public void prikaziDrzaveComboBox() {
-        listaDrzava = Main.dohvatiDrzave();
-        ObservableList<Drzava> listaDrzavaCombo = FXCollections.observableArrayList(listaDrzava);
+        ObservableList<Drzava> listaDrzavaCombo = FXCollections.observableArrayList(dohvatiDrzave());
         drzavaComboBox.setItems(listaDrzavaCombo);
     }
 

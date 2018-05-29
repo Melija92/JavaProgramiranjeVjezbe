@@ -1,5 +1,6 @@
 package hr.java.vjezbe.javafx;
 
+import hr.java.vjezbe.baza.podataka.BazaPodataka;
 import hr.java.vjezbe.entitet.*;
 import hr.java.vjezbe.javafx.Main;
 import javafx.beans.property.ReadOnlyObjectWrapper;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.event.ActionEvent;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -66,14 +68,18 @@ public class PocetniEkranController {
                 return new ReadOnlyObjectWrapper<String> (param.getValue().getZupanija().getNaziv());}});
     }
 
-    public static void dodajNovoMjesto(Mjesto novoMjesto) {
-        listaMjesta = Main.dohvatiMjesta();
-        listaMjesta.add(novoMjesto);
-    }
-
     @FXML
     public void prikaziMjesta() {
-        listaMjesta = Main.dohvatiMjesta();
+
+        try{
+            listaMjesta = BazaPodataka.dohvatiMjesta();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
         List<Mjesto> filtriranaMjesta = new ArrayList<Mjesto>();
         if (mjestaFilterTextField.getText().isEmpty() == false) {
             filtriranaMjesta = listaMjesta.stream().filter(m ->

@@ -2,9 +2,6 @@ package hr.java.vjezbe.entitet;
 
 /**
  * Predstavlja entitet senzora vlage opisanog atributima nadklase
- *
- * @author Marko
- * @version 1.0
  */
 public class SenzorVlage extends Senzor {
     /**

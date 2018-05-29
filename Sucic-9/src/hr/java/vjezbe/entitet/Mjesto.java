@@ -5,9 +5,6 @@ import java.util.List;
 
 /**
  * Predstavlja entitet mjesto opisan atributima naziv i županija
- *
- * @author Marko
- * @version 1.0
  */
 public class Mjesto extends BazniEntitet{
 

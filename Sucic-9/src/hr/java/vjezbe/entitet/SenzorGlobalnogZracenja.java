@@ -2,9 +2,6 @@ package hr.java.vjezbe.entitet;
 
 /**
  * Predstavlja entitet senzora globalnog zračenja opisanog atributima nadklase i atributom tip podsenzora
- *
- * @author Marko
- * @version 1.0
  */
 public class SenzorGlobalnogZracenja extends Senzor{
 

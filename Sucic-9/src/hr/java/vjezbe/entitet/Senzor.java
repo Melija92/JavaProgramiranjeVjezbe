@@ -4,9 +4,6 @@ import java.math.BigDecimal;
 
 /**
  * Predstavlja bazni entitet senzora opisan atributima mjerna jedinica, preciznost, vrijednost
- *
- * @author Marko
- * @version 1.0
  */
 public abstract class Senzor extends BazniEntitet{
 
@@ -14,6 +11,8 @@ public abstract class Senzor extends BazniEntitet{
 	private Double preciznost;
 	private BigDecimal vrijednost;
 	private RadSenzora radSenzora;
+
+    private MjernaPostaja mjernaPostaja;
 
     /**
      * Inicijalizira podatke senzora
@@ -31,6 +30,16 @@ public abstract class Senzor extends BazniEntitet{
 		this.mjernaJedinica = mjernaJedinica;
 		this.preciznost = preciznost;
 	}
+
+    public Senzor(Integer id, String mjernaJedinica, Double preciznost, BigDecimal vrijednost,
+                  RadSenzora radSenzora, MjernaPostaja mjernaPostaja) {
+        super(id);
+        this.mjernaJedinica = mjernaJedinica;
+        this.preciznost = preciznost;
+        this.vrijednost = vrijednost;
+        this.radSenzora = radSenzora;
+        this.mjernaPostaja = mjernaPostaja;
+    }
 
 	/**
      * Dohvaća mjernu jedinicu senzora
@@ -77,6 +86,14 @@ public abstract class Senzor extends BazniEntitet{
 	public RadSenzora getRadSenzora() {
 		return radSenzora;
 	}
+
+    public MjernaPostaja getMjernaPostaja() {
+        return mjernaPostaja;
+    }
+
+    public void setMjernaPostaja(MjernaPostaja mjernaPostaja) {
+        this.mjernaPostaja = mjernaPostaja;
+    }
 
 	public void setRadSenzora(RadSenzora radSenzora) {
 		this.radSenzora = radSenzora;

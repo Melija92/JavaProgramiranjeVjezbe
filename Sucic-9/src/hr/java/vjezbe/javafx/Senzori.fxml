@@ -83,10 +83,12 @@
                         </FlowPane>
                         <TableView fx:id="senzorTableView" prefHeight="323.0" prefWidth="690.0">
                           <columns>
-                            <TableColumn id="tipColumn" fx:id="jedinicaColumn" prefWidth="75.0" text="Jedinica" />
-                              <TableColumn id="tipColumn" fx:id="odstupanjeColumn" prefWidth="132.0" text="Preciznost" />
-                              <TableColumn id="tipColumn" fx:id="vrijednostColumn" prefWidth="132.0" text="Vrijednost" />
-                              <TableColumn id="tipColumn" fx:id="nacinRadaColumn" prefWidth="132.0" text="Nacin rada" />
+                            <TableColumn id="tipColumn" fx:id="jedinicaColumn" prefWidth="100.0" text="Jedinica" />
+                              <TableColumn id="tipColumn" fx:id="vrijednostColumn" prefWidth="100.0" text="Vrijednost" />
+                              <TableColumn id="tipColumn" fx:id="nacinRadaColumn" prefWidth="100.0" text="Način rada" />
+                              <TableColumn id="tipColumn" fx:id="nazivPostajeColumn" prefWidth="100.0" text="Naziv postaje" />
+                              <TableColumn id="tipColumn" fx:id="nazivKomonenteColumn" prefWidth="100.0" text="Elekt. kompomnenta" />
+                              <TableColumn id="tipColumn" fx:id="odstupanjeColumn" prefWidth="100.0" text="Preciznost" />
                           </columns>
                         </TableView>
                      </children>

@@ -271,4 +271,51 @@ public class BazaPodataka {
 
         return lista;
     }
+
+
+    public static void izbrisiMjernuPostaju(Integer idPostaje) throws SQLException, IOException {
+        Connection veza = spajanjeNaBazuPodataka();
+        Statement statement = veza.createStatement();
+
+        PreparedStatement brisanjeSenzora = veza.prepareStatement("DELETE * FROM POSTAJE.SENZOR WHERE POSTAJE.SENZOR.MJERNA_POSTAJA_ID = ?");
+        brisanjeSenzora.setInt(1, idPostaje);
+
+        PreparedStatement brisanjeMjernePostaje = veza.prepareStatement("DELETE * FROM POSTAJE.MJERNA_POSTAJA WHERE POSTAJE.MJERNA_POSTAJA.ID = ?");
+        brisanjeMjernePostaje.setInt(1, idPostaje);
+
+        zatvaranjeVezeNaBazuPodataka(veza);
+    }
+
+    public static List<MjernaPostaja> prikaziMjernePostajeIzPojedinogMjesta(Integer idPostaje) throws SQLException, IOException {
+        Connection veza = spajanjeNaBazuPodataka();
+        Statement statement = veza.createStatement();
+
+        List<MjernaPostaja> mjernePostaje = new ArrayList<>();
+        PreparedStatement result = veza.prepareStatement("SELECT * FROM POSTAJE.MJERNA_POSTAJA. FROM POSTAJE.MJERNA_POSTAJA WHERE POSTAJE.MJERNA_POSTAJA.MJESTO_ID = ?");
+        result.setInt(1,idPostaje );
+        result.executeUpdate();
+
+
+//        ResultSet result = statement.executeQuery("SELECT * FROM POSTAJE.MJERNA_POSTAJA. FROM POSTAJE.MJERNA_POSTAJA WHERE POSTAJE.MJERNA_POSTAJA.MJESTO_ID = ?");
+
+        List< MjernaPostaja > lista = new ArrayList<>();
+
+        while (result.next()) {
+            Integer postajaId = result.getInt("MJERNA_POSTAJA.ID");
+            String nazivPostaje = result.getString("MJERNA_POSTAJA.NAZIV");
+            String nazivMjesta = result.getString("MJESTO.NAZIV");
+            BigDecimal lat = result.getBigDecimal("MJERNA_POSTAJA.LAT");
+            BigDecimal lag = result.getBigDecimal("MJERNA_POSTAJA.LNG");
+
+            GeografskaTocka geoTocka = new GeografskaTocka(lat, lag);
+            Mjesto mjesto = new Mjesto(nazivMjesta, null);
+            MjernaPostaja postaja = new MjernaPostaja(postajaId, nazivPostaje, mjesto, geoTocka);
+
+
+            lista.add(postaja);
+        }
+        zatvaranjeVezeNaBazuPodataka(veza);
+
+        return null;
+    }
 }

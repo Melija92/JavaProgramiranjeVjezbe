@@ -69,6 +69,22 @@ public class PocetniEkranController {
     }
 
     @FXML
+    public void prikaziMjernePostajeTrazenogMjesta() {
+        Integer postajaId = mjestaTableView.getSelectionModel().getSelectedItems().get(0).getId();
+        List<MjernaPostaja> filtriraneMjernePostaje = null;
+
+        try{
+            filtriraneMjernePostaje = BazaPodataka.prikaziMjernePostajeIzPojedinogMjesta(postajaId);
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     public void prikaziMjesta() {
 
         try{

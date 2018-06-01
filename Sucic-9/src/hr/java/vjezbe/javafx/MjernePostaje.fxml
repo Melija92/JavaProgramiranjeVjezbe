@@ -81,7 +81,7 @@
                                  </FlowPane.margin></Button>
                            </children>
                         </FlowPane>
-                        <TableView fx:id="postajaTableView" prefHeight="323.0" prefWidth="690.0">
+                        <TableView fx:id="postajaTableView" onMouseClicked="#izbrisiMjernuPostaju" prefHeight="323.0" prefWidth="690.0">
                           <columns>
                             <TableColumn fx:id="nazivColumn" prefWidth="75.0" text="Naziv" />
                             <TableColumn id="tipColumn" fx:id="mjestoColumn" prefWidth="75.0" text="Mjesto" />

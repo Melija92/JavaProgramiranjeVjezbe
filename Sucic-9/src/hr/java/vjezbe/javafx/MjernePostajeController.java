@@ -67,6 +67,30 @@ public class MjernePostajeController {
     }
 
     @FXML
+    public void izbrisiMjernuPostaju(){
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Mjerna postaja bit će izbrisana!");
+        alert.setHeaderText("Mjerna postaja bit će izbrisana!");
+        alert.setContentText("Mjerna postaja bit će izbrisana!");
+        alert.showAndWait();
+        Stage stage = (Stage) postajaTableView.getScene().getWindow();
+        stage.close();
+
+        Integer postajaId = postajaTableView.getSelectionModel().getSelectedItems().get(0).getId();
+
+        try{
+            BazaPodataka.izbrisiMjernuPostaju(postajaId);
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     public void prikaziPostaje() {
         try{
             listaPostaja = BazaPodataka.dohvatiMjernePostaje();
